@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    :root { --bg:#F7F4EE; --ink:#1D1B16; --body:#494436; --mut:#8A8271; --mut2:#A39B88; --accent:#1E5B45; --accent-h:#164434; --on-accent:#F7F4EE; --panel:#FFFDF8; --panel2:#FAF7F0; --strip:#F2EEE3; --line:#E0D9CA; --line2:#E5DFD3; --line3:#D6CFBF; --hair:#ECE6D9; --tintg:#EAF3EE; --tintgb:#BDD5C6; --amber:#8A6D1F; --amberline:#E2D5B4; --amberbg:#FBF6E8; --navbg:rgba(247,244,238,0.92); }
+    :root[data-mode="dark"] { --bg:#0C1410; --ink:#E8EFE9; --body:#A9BCAF; --mut:#6E8477; --mut2:#4E6459; --accent:#8FC7A8; --accent-h:#A9D8BE; --on-accent:#0C1410; --panel:#101A14; --panel2:#0E1712; --strip:#0F1812; --line:#24352C; --line2:#1E2C24; --line3:#2C3E34; --hair:#18241D; --tintg:#12211A; --tintgb:#2C3E34; --amber:#E8C87E; --amberline:rgba(232,200,126,0.3); --amberbg:rgba(232,200,126,0.06); --navbg:rgba(12,20,16,0.9); }
+    body { margin: 0; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; transition: background 0.25s ease, color 0.25s ease; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    @media (max-width: 1000px) { .bw-navlinks { display: none !important; } .bw-legal { grid-template-columns: 1fr !important; } .bw-toc { position: static !important; } }
+    @media (max-width: 620px) { .bw-phone-label { display: none !important; } }
+  </style>
+</helmet>
+
+<div style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: var(--ink); background: var(--bg); min-height: 100vh;">
+
+  <div style="background: #17251F; color: #D8E4DC; text-align: center; padding: 10px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+    <span style="color: #8FC7A8; letter-spacing: 0.1em;">✦</span>
+    <span>FREE CONCIERGE ONBOARDING</span>
+    <span style="color: #4E6459;">·</span>
+    <span style="color: #B9C6BC;">FROM SPREADSHEETS, EMAILS, PAPERS, OR ANY AMS — LIVE IN UNDER 3 WEEKS</span>
+    <a href="Starlight Landing.dc.html#migration" style="color: #8FC7A8; text-decoration: none; border-bottom: 1px solid #4E6459; padding-bottom: 1px;" style-hover="border-color: #8FC7A8;">DETAILS →</a>
+  </div>
+
+  <header style="position: sticky; top: 0; z-index: 50; background: var(--navbg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line2);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="Starlight Landing.dc.html" style="font-family: 'Instrument Serif', serif; font-size: 26px; text-decoration: none; color: var(--ink); letter-spacing: -0.01em;">Starlight<span style="color: var(--accent);">.</span></a>
+      <nav class="bw-navlinks" style="display: flex; gap: 26px; font-size: 14.5px; font-weight: 500;">
+        <a href="BrokerOS.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">BrokerOS</a>
+        <a href="Starlight Landing.dc.html#how" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">How it works</a>
+        <a href="Starlight Landing.dc.html#migration" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Migration</a>
+        <a href="Starlight Landing.dc.html#fill" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Fill engine</a>
+        <a href="Trust.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Trust</a>
+        <a href="Pricing.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
+        <a href="Contact.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Contact</a>
+      </nav>
+      <div style="display: flex; gap: 20px; align-items: center;">
+        <button onClick="{{ toggleMode }}" title="{{ modeTitle }}" style="width: 32px; height: 32px; border-radius: 50%; background: var(--tintg); border: 1px solid var(--tintgb); color: var(--accent); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; line-height: 1; padding: 0; flex-shrink: 0;">{{ modeIcon }}</button>
+        <a href="{{ phoneHref }}" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink);" style-hover="color: var(--accent);">
+          <span style="width: 32px; height: 32px; border-radius: 50%; background: var(--tintg); border: 1px solid var(--tintgb); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="var(--accent)"/></svg>
+          </span>
+          <span class="bw-phone-label" style="display: flex; flex-direction: column; line-height: 1.2; white-space: nowrap;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: var(--mut);">TALK TO US</span>
+            <span style="font-family: 'Instrument Sans', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: normal; color: var(--ink);">{{ phoneDisplay }}</span>
+          </span>
+        </a>
+        <a href="BookDemo.dc.html" class="bw-navlinks" style="color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 500; padding: 9px 14px;" style-hover="color: var(--accent);">Sign in</a>
+      </div>
+    </div>
+  </header>
+
+  <section data-screen-label="Privacy Policy" style="max-width: 1200px; margin: 0 auto; padding: 76px 32px 100px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">LEGAL</div>
+    <h1 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 46px; letter-spacing: -0.01em; margin: 0 0 16px; max-width: 620px; line-height: 1.08;">Privacy Policy</h1>
+    <p style="font-size: 17px; color: var(--body); margin: 0 0 10px; max-width: 620px; text-wrap: pretty;">How Starlight handles personal information — both the data we hold about you, and the client data your agency trusts us to process.</p>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--mut); letter-spacing: 0.05em; margin-bottom: 52px;">EFFECTIVE JULY 25, 2026 · VERSION 1.0</div>
+
+    <div class="bw-legal" style="display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start;">
+
+      <nav class="bw-toc" style="position: sticky; top: 90px; display: flex; flex-direction: column; gap: 9px; border-top: 1px solid var(--line3); padding-top: 16px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: var(--mut); margin-bottom: 4px;">CONTENTS</div>
+        <a href="#roles" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">1 · Our two roles</a>
+        <a href="#collect" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">2 · What we collect</a>
+        <a href="#calls" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">3 · Calls, texts &amp; recordings</a>
+        <a href="#use" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">4 · How we use data</a>
+        <a href="#ai" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">5 · AI and model training</a>
+        <a href="#share" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">6 · Who we share with</a>
+        <a href="#residency" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">7 · Residency &amp; transfers</a>
+        <a href="#retention" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">8 · Retention</a>
+        <a href="#security" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">9 · Security</a>
+        <a href="#rights" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">10 · Your rights</a>
+        <a href="#cookies" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">11 · Cookies &amp; analytics</a>
+        <a href="#children" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">12 · Children</a>
+        <a href="#changes" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">13 · Changes</a>
+        <a href="#contact" style="font-size: 13.5px; color: var(--body); text-decoration: none;" style-hover="color: var(--accent);">14 · Contact us</a>
+      </nav>
+
+      <div style="max-width: 720px; font-size: 15.5px; color: var(--body); line-height: 1.68;">
+
+        <p style="margin: 0 0 30px; padding: 18px 22px; background: var(--strip); border: 1px solid var(--line); border-radius: 12px; color: var(--ink); font-size: 15px;">In plain terms: we sell software to insurance agencies. We do not sell anyone's personal information, we do not train public AI models on your book of business, and an agency can export or delete its data at any time.</p>
+
+        <h2 id="roles" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">1 · Our two roles</h2>
+        <p style="margin: 0 0 14px;">Starlight Inc. ("Starlight," "we," "us") plays two distinct roles, and the rules differ for each.</p>
+        <p style="margin: 0 0 14px;"><b style="color: var(--ink);">We are the controller</b> of personal information we collect for our own business: visitors to getstarlight.ai, people who book demos or contact us, and the staff of agencies who hold accounts with us. This policy governs that data directly.</p>
+        <p style="margin: 0 0 14px;"><b style="color: var(--ink);">We are a processor (service provider)</b> for the client and policy data an agency puts into the platform — its insureds, prospects, documents, call recordings and transcripts. The agency decides what is collected and why; we handle it only on the agency's instructions, under our agreement with them. If you are an insured or prospect of an agency that uses Starlight and you want to access, correct or delete your information, contact that agency first — they are the right party. We will support them in responding.</p>
+
+        <h2 id="collect" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">2 · What we collect</h2>
+        <p style="margin: 0 0 14px;"><b style="color: var(--ink);">You give us:</b> name, work email, phone number, agency name and role when you book a demo, contact us, or create an account; billing details (processed by our payment provider — we never store full card numbers); support messages and anything you send us.</p>
+        <p style="margin: 0 0 14px;"><b style="color: var(--ink);">Your agency puts into the platform:</b> client and prospect records, policy and coverage data, documents (applications, loss runs, certificates, statements of value), email and message threads, call recordings and transcripts, and the audit trail of who did what and when.</p>
+        <p style="margin: 0 0 14px;"><b style="color: var(--ink);">We collect automatically:</b> IP address, browser and device type, pages viewed, referring links, and product usage events (which features were used, when, and by which account) — used to keep the service secure and to understand what to improve.</p>
+        <p style="margin: 0 0 14px;">We do not knowingly collect government identifiers, health information, or payment card data of your insureds. Do not upload them unless a specific workflow calls for it and your agency has a lawful basis.</p>
+
+        <h2 id="calls" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">3 · Calls, texts &amp; recordings</h2>
+        <p style="margin: 0 0 14px;">The platform places outbound calls and sends text messages to an agency's clients on that agency's behalf, and records and transcribes those interactions so the agency has a defensible record.</p>
+        <p style="margin: 0 0 14px;">Our AI agents identify themselves as an automated assistant working for the agency. Recording notice is given at the start of a call, and recording can be configured off. The <b style="color: var(--ink);">agency</b> is responsible for having the consents its jurisdiction requires — including consent to be contacted by automated means and, in all-party-consent states and provinces, consent to be recorded. Our Terms of Service set this out in detail.</p>
+        <p style="margin: 0 0 14px;">Anyone can tell an agent to stop contacting them, and that request is honored and recorded on the client's file. Agencies can also maintain a do-not-contact list that no agent may dial.</p>
+
+        <h2 id="use" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">4 · How we use data</h2>
+        <p style="margin: 0 0 14px;">We use personal information to provide and operate the platform; to authenticate users and prevent abuse; to complete the work an agency asks its agents to do; to bill and support customers; to send service notices and, where permitted, occasional product news you can unsubscribe from; to meet legal, tax and audit obligations; and to investigate security incidents.</p>
+        <p style="margin: 0 0 14px;">We do not sell personal information, and we do not share it for cross-context behavioral advertising.</p>
+
+        <h2 id="ai" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">5 · AI and model training</h2>
+        <p style="margin: 0 0 14px;">The platform uses AI models to read documents, hold voice and text conversations, and map answers onto forms. Three commitments:</p>
+        <p style="margin: 0 0 14px;">First, <b style="color: var(--ink);">we do not use your client data to train foundation models</b>, ours or anyone else's, and our AI vendors are contractually barred from training on data we send them.</p>
+        <p style="margin: 0 0 14px;">Second, personal information is minimized before it reaches a model: identifying fields are masked where the task does not need them, and each workflow sees only the fields it requires.</p>
+        <p style="margin: 0 0 14px;">Third, AI output is assistive. Every field the fill engine produces is cited to its source document so a human can verify it before anything is submitted to a carrier. We may use aggregated, de-identified statistics — never client-identifying content — to measure and improve accuracy.</p>
+
+        <h2 id="share" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">6 · Who we share with</h2>
+        <p style="margin: 0 0 14px;">We share personal information only with service providers who help us run the platform, each under contract and only for that purpose:</p>
+        <div style="display: flex; flex-direction: column; gap: 0; margin: 0 0 16px; border-top: 1px solid var(--hair);">
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14.5px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--accent);">CLOUD HOSTING</span><span>Storage, compute and backups in your chosen region</span></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14.5px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--accent);">TELEPHONY</span><span>Placing calls and sending texts, plus recording storage</span></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14.5px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--accent);">AI PROVIDERS</span><span>Speech, language and extraction models, no training on your data</span></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14.5px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--accent);">EMAIL DELIVERY</span><span>Transactional and notification email</span></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14.5px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--accent);">PAYMENTS</span><span>Subscription billing and invoicing</span></div>
+          <div style="display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14.5px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--accent);">ANALYTICS</span><span>Website measurement and product usage, described in §11</span></div>
+        </div>
+        <p style="margin: 0 0 14px;">A current list of subprocessors is available on request, and agencies on annual terms get advance notice of material changes. We also disclose information when law requires it — and if we are legally permitted, we tell the affected agency first. If Starlight is ever acquired, data transfers with the business under this same policy.</p>
+
+        <h2 id="residency" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">7 · Residency &amp; transfers</h2>
+        <p style="margin: 0 0 14px;">Agencies choose their data region at setup: United States books stay in the United States, Canadian books stay in Canada. Primary storage, backups and call recordings stay in that region. Where a service provider must process data elsewhere, we use recognized transfer mechanisms and hold them to the same standard.</p>
+
+        <h2 id="retention" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">8 · Retention</h2>
+        <p style="margin: 0 0 14px;">Client records, documents and audit trails are kept for as long as the agency's account is active, or as long as the agency's retention policy specifies. Recordings and transcripts follow the retention window on the agency's plan; agencies can always access whatever exists, and can delete individual items sooner.</p>
+        <p style="margin: 0 0 14px;">After an account closes we keep data for 30 days so it can be exported or restored, then delete it within 90 days, except where we must retain records for legal, tax or dispute purposes. Backups age out on their own schedule. Website and marketing contacts are kept until they ask us to stop or go 24 months without contact.</p>
+
+        <h2 id="security" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">9 · Security</h2>
+        <p style="margin: 0 0 14px;">AES-256 encryption at rest and TLS 1.3 in transit, covering documents, transcripts and recordings; keys rotated on schedule; least-privilege internal access with named accounts; and a timestamped audit trail on every client record. Details are on our <a href="Trust.dc.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">Trust page</a>.</p>
+        <p style="margin: 0 0 14px;">No system is perfect. If a breach affects an agency's data we notify that agency without undue delay and no later than any statutory deadline, with what we know and what we are doing about it.</p>
+
+        <h2 id="rights" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">10 · Your rights</h2>
+        <p style="margin: 0 0 14px;">Depending on where you live you may have the right to access the personal information we hold about you, correct it, delete it, receive a portable copy, withdraw consent, opt out of marketing, and not be discriminated against for exercising any of these rights. California residents may also confirm that we do not sell or share personal information as those terms are defined by the CCPA/CPRA. Canadian residents have equivalent rights under PIPEDA and Québec's Law 25.</p>
+        <p style="margin: 0 0 14px;">Email <a href="{{ privacyHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">{{ privacyEmail }}</a> and we will verify and respond within 30 days (45 where the law allows an extension). An authorized agent may act for you with written proof. If you are an insured or prospect of an agency using Starlight, send your request to that agency — see §1.</p>
+
+        <h2 id="cookies" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">11 · Cookies &amp; analytics</h2>
+        <p style="margin: 0 0 14px;">Our website uses strictly necessary cookies to keep you signed in and secure, and measurement tools to understand how the site is used. Those tools may include Google Analytics and Microsoft Clarity, which can record pages viewed, clicks, scrolling and other interactions to produce heatmaps and session replays. Replays exclude keystrokes in form fields, and we do not use them to identify individuals.</p>
+        <p style="margin: 0 0 14px;">Inside the product itself we use only first-party analytics on feature usage — no advertising trackers touch client data. You can block cookies in your browser and honor-do-not-track signals are respected where required; strictly necessary cookies cannot be turned off without breaking sign-in.</p>
+
+        <h2 id="children" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">12 · Children</h2>
+        <p style="margin: 0 0 14px;">Starlight is business software, not intended for anyone under 18. We do not knowingly collect information from children. If you believe a child's information reached us, write to us and we will delete it.</p>
+
+        <h2 id="changes" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">13 · Changes</h2>
+        <p style="margin: 0 0 14px;">When this policy changes we update the effective date at the top. For changes that materially affect how we handle personal information, we notify account holders by email at least 30 days before they take effect. Prior versions are available on request.</p>
+
+        <h2 id="contact" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 27px; color: var(--ink); margin: 44px 0 12px; scroll-margin-top: 90px;">14 · Contact us</h2>
+        <p style="margin: 0 0 14px;">Starlight Inc. — privacy questions, requests and complaints: <a href="{{ privacyHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">{{ privacyEmail }}</a> or <a href="{{ phoneHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">{{ phoneDisplay }}</a>. A real person answers, and we would rather hear from you than have you file a complaint. If you are not satisfied with our response you may contact your state attorney general, the Office of the Privacy Commissioner of Canada, or the Commission d'accès à l'information du Québec.</p>
+
+        <div style="margin-top: 44px; padding: 20px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel2); display: flex; gap: 18px 32px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+          <span style="font-size: 14.5px; color: var(--ink);">Also worth reading — the agreement that governs use of the platform.</span>
+          <a href="Terms.dc.html" style="font-size: 14.5px; font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">Terms of Service →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="--ink:#1D1B16; --on-accent:#F7F4EE; --mut:#8A8271; background: var(--ink); color: #C9C2B2;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 80px 32px 40px;">
+      <div style="display: flex; gap: 56px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 64px;">
+        <div style="max-width: 300px;">
+          <div style="font-family: 'Instrument Serif', serif; font-size: 28px; color: var(--on-accent); margin-bottom: 14px;">Starlight<span style="color: #8FC7A8;">.</span></div>
+          <p style="font-size: 14px; color: var(--mut); margin: 0; text-wrap: pretty;">The AI-native broker management system for P&amp;C commercial agencies.</p>
+        </div>
+        <div style="display: flex; gap: 40px 44px; flex-wrap: wrap;">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: var(--mut); margin-bottom: 16px;">PLATFORM</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+              <a href="BrokerOS.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">AI voice agent</a>
+              <a href="BrokerOS.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Quote applications</a>
+              <a href="BrokerOS.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Document collection</a>
+              <a href="BrokerOS.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Renewals</a>
+              <a href="BrokerOS.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Pipeline &amp; tasks</a>
+              <a href="BrokerOS.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Compliance &amp; audit</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: var(--mut); margin-bottom: 16px;">SOLUTIONS</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+              <a href="Starlight Landing.dc.html#how" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">P&amp;C commercial agencies</a>
+              <a href="Starlight Landing.dc.html#how" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">MGAs &amp; wholesalers</a>
+              <a href="Starlight Landing.dc.html#migration" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Switching from Applied Epic</a>
+              <a href="Starlight Landing.dc.html#migration" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Switching from AMS360</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: var(--mut); margin-bottom: 16px;">BY ROLE</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+              <a href="BrokerOS.dc.html#delegation" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Producers</a>
+              <a href="BrokerOS.dc.html#ask" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Account managers &amp; CSRs</a>
+              <a href="BrokerOS.dc.html#tuesday" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Operations leaders</a>
+              <a href="BrokerOS.dc.html#verify" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Agency principals</a>
+              <a href="BrokerOS.dc.html#audit" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Compliance leads</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: var(--mut); margin-bottom: 16px;">LINES OF BUSINESS</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+              <a href="BrokerOS.dc.html#lob" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Commercial property</a>
+              <a href="BrokerOS.dc.html#lob" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Commercial auto &amp; fleet</a>
+              <a href="BrokerOS.dc.html#lob" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">General liability</a>
+              <a href="BrokerOS.dc.html#lob" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Workers' comp</a>
+              <a href="BrokerOS.dc.html#lob" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Excess &amp; surplus</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: var(--mut); margin-bottom: 16px;">RESOURCES</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+              <a href="Starlight Landing.dc.html#migration" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Migration guide</a>
+              <a href="Trust.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Security &amp; compliance</a>
+              <a href="Starlight Landing.dc.html#integrations" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">API &amp; integrations</a>
+              <a href="Blog.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Blog</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: var(--mut); margin-bottom: 16px;">COMPANY</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+              <a href="Pricing.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Pricing</a>
+              <a href="About.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">About</a>
+              <a href="Careers.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Careers</a>
+              <a href="Contact.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Contact</a>
+              <a href="BookDemo.dc.html" style="color: #C9C2B2; text-decoration: none;" style-hover="color: var(--on-accent);">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--body); padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--mut); letter-spacing: 0.05em;">
+        <span>© 2026 STARLIGHT INC. · ALL RIGHTS RESERVED</span>
+        <span><a href="Privacy.dc.html" style="color: var(--mut); text-decoration: none;" style-hover="color: #C9C2B2;">PRIVACY</a> · <a href="Terms.dc.html" style="color: var(--mut); text-decoration: none;" style-hover="color: #C9C2B2;">TERMS</a> · <a href="Terms.dc.html#eo" style="color: var(--mut); text-decoration: none;" style-hover="color: #C9C2B2;">E&amp;O NOTICE</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  _decode(b64) { return atob(b64); }
+  renderVals() {
+    if (!this._bwModeInit) {
+      this._bwModeInit = true;
+      try { const s = localStorage.getItem('bw-mode'); if (s === 'dark' || s === 'light') document.documentElement.dataset.mode = s; } catch (e) {}
+    }
+    const phone = this._decode('KzEzMTIyMDAxOTky');
+    const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI=');
+    const privacyEmail = this._decode('aGVsbG9AZ2V0c3RhcmxpZ2h0LmFp');
+    return {
+      toggleMode: () => {
+        const m = (document.documentElement.dataset.mode === 'dark') ? 'light' : 'dark';
+        try { localStorage.setItem('bw-mode', m); } catch (e) {}
+        try { document.documentElement.dataset.mode = m; } catch (e) {}
+        this.forceUpdate();
+      },
+      modeIcon: (document.documentElement.dataset.mode === 'dark') ? '☀' : '☾',
+      modeTitle: (document.documentElement.dataset.mode === 'dark') ? 'Switch to light mode' : 'Switch to dark mode',
+      phoneHref: 'tel:' + phone,
+      phoneDisplay,
+      privacyEmail,
+      privacyHref: 'mailto:' + privacyEmail
+    };
+  }
+}
+</script>
+</body>
+</html>
