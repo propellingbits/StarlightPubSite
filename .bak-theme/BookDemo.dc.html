@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pricing — Starlight</title>
-<meta name="description" content="Plans for small and mid-size P&amp;C agencies. Free concierge onboarding and migration from any AMS.">
+<title>Book a Demo — Starlight</title>
+<meta name="description" content="See Starlight run your messiest file live. Under 30 minutes.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Starlight">
-<meta property="og:title" content="Pricing — Starlight">
-<meta property="og:description" content="Plans for small and mid-size P&amp;C agencies. Free concierge onboarding and migration from any AMS.">
+<meta property="og:title" content="Book a Demo — Starlight">
+<meta property="og:description" content="See Starlight run your messiest file live. Under 30 minutes.">
 <meta property="og:image" content="https://getstarlight.ai/og-image.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="./theme.css">
 <!-- Sets the theme before first paint so dark-mode users don't get a light flash.
      Must stay inline and blocking: an external file reintroduces the flash. -->
 <script>try{var m=localStorage.getItem('bw-mode');if(m==='dark'||m==='light')document.documentElement.dataset.mode=m}catch(e){}</script>
@@ -24,7 +23,20 @@
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    :root { --bg:#F7F4EE; --ink:#1D1B16; --body:#494436; --mut:#8A8271; --mut2:#A39B88; --accent:#1E5B45; --accent-h:#164434; --on-accent:#F7F4EE; --panel:#FFFDF8; --panel2:#FAF7F0; --strip:#F2EEE3; --line:#E0D9CA; --line2:#E5DFD3; --line3:#D6CFBF; --hair:#ECE6D9; --hair2:#EFE9DC; --hair3:#F2EDE1; --track:#EBE5D8; --tintg:#EAF3EE; --tintgb:#BDD5C6; --tintg2:#EFF6F1; --empty:#C4BCA9; --card:#FFFFFF; --cardline:#D9D2C2; --amber:#8A6D1F; --amberline:#E2D5B4; --amberbg:#FBF6E8; --amberbg2:#FBF3DD; --hl:#F5E6B8; --stampbg:rgba(255,253,248,0.95); --navbg:rgba(247,244,238,0.92); }
+    :root[data-mode="dark"] { --bg:#0C1410; --ink:#E8EFE9; --body:#A9BCAF; --mut:#6E8477; --mut2:#4E6459; --accent:#8FC7A8; --accent-h:#A9D8BE; --on-accent:#0C1410; --panel:#101A14; --panel2:#0E1712; --strip:#0F1812; --line:#24352C; --line2:#1E2C24; --line3:#2C3E34; --hair:#18241D; --hair2:#18241D; --hair3:#141F18; --track:#1E2C24; --tintg:#12211A; --tintgb:#2C3E34; --tintg2:rgba(143,199,168,0.12); --empty:#3A4F43; --card:#121D16; --cardline:#24352C; --amber:#E8C87E; --amberline:rgba(232,200,126,0.3); --amberbg:rgba(232,200,126,0.06); --amberbg2:rgba(232,200,126,0.09); --hl:#F5E6B8; --stampbg:rgba(12,20,16,0.92); --navbg:rgba(12,20,16,0.9); }
+    body { margin: 0; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; transition: background 0.25s ease, color 0.25s ease; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    /* bw-tokens-end */
+    @keyframes bwFadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    /* responsive */
+    @media (max-width: 1000px) {
+      .bw-navlinks { display: none !important; }
+    }
+  </style>
 </helmet>
 
 <div style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: var(--ink); background: var(--bg); min-height: 100vh;">
@@ -48,7 +60,7 @@
         <a href="Starlight Landing.dc.html#migration" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Migration</a>
         <a href="Starlight Landing.dc.html#fill" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Fill engine</a>
         <a href="Trust.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Trust</a>
-        <a href="Pricing.dc.html" style="color: var(--accent); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
+        <a href="Pricing.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
         <a href="Contact.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Contact</a>
       </nav>
       <div style="display: flex; gap: 20px; align-items: center;">
@@ -68,81 +80,39 @@
     </div>
   </header>
 
-  <!-- ══ Pricing ══ -->
-  <section data-screen-label="Pricing">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 90px 32px 110px;">
-      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">PRICING</div>
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 22px; flex-wrap: wrap;">
-        <h2 class="bw-h2" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 46px; letter-spacing: -0.01em; margin: 0; max-width: 580px; line-height: 1.08;">One flat price. Every seat included.</h2>
-        <p style="font-size: 16px; color: var(--body); margin: 0; max-width: 400px; text-wrap: pretty;">No per-seat tax like the legacy AMS players charge. Add producers and CSRs freely — the price is set by the plan, not your headcount.</p>
+  <!-- ══ Book a demo ══ -->
+  <section data-screen-label="Book a demo" style="background: var(--panel);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 90px 32px 110px; display: flex; gap: 72px; flex-wrap: wrap; align-items: center;">
+      <div style="flex: 1 1 440px; min-width: 340px; animation: bwFadeUp 0.7s ease both;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">BOOK A DEMO</div>
+        <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 52px; letter-spacing: -0.015em; margin: 0 0 22px; line-height: 1.05;">See your agency on Starlight.</h2>
+        <p style="font-size: 18px; color: var(--body); margin: 0; max-width: 480px; text-wrap: pretty;">Twenty minutes. Bring your messiest file — we'll show you what the AI does with it, live. Your calendar loads automatically, right here.</p>
       </div>
+      <div style="flex: 1 1 400px; min-width: 340px; animation: bwFadeUp 0.7s 0.15s ease both;">
+        <div style="perspective: 1600px;">
+          <div style="position: relative; min-height: 580px; transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(0.5, 0, 0.2, 1); transform: {{ calFlip }};">
 
-      <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; color: var(--accent); margin-bottom: 18px;">You write the business. We work the file.</div>
+            <!-- front -->
+            <div style="position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--panel); border: 1px dashed var(--empty); border-radius: 14px; padding: 14px; box-shadow: 0 16px 40px -20px rgba(29,27,22,0.18);">
+              <div style="border-radius: 10px; background: repeating-linear-gradient(-45deg, var(--bg), var(--bg) 10px, var(--strip) 10px, var(--strip) 20px); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 40px 30px; text-align: center;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--mut);">BOOK A 20-MIN WALKTHROUGH</div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--mut); max-width: 300px; line-height: 1.7;">Loading your calendar — or jump in now.</div>
+                <button onClick="{{ flipCal }}" style="background: var(--accent); color: var(--on-accent); border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 13px 24px; border-radius: 10px; margin-top: 6px; transition: background 0.15s;" style-hover="background: var(--accent-h);">View calendar now</button>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--mut2); letter-spacing: 0.05em;">POWERED BY CAL.COM · NO CONTRACT REQUIRED TO LOOK</div>
+              </div>
+            </div>
 
-      <div style="display: flex; justify-content: center; margin-bottom: 44px;">
-        <div style="display: inline-flex; background: var(--track); border-radius: 999px; padding: 4px; gap: 2px;">
-          <button onClick="{{ setMonthly }}" style="{{ monthlyBtnStyle }}">Monthly</button>
-          <button onClick="{{ setAnnual }}" style="{{ annualBtnStyle }}">Annual <span style="background: var(--accent); color: var(--on-accent); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.04em; padding: 2px 7px; border-radius: 999px; margin-left: 6px;">SAVE 10%</span></button>
-        </div>
-      </div>
-
-      <div class="bw-g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-        <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column;">
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px;">INDEPENDENT &amp; SMALL TEAMS</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Starter</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">{{ starterPrice }}</span><span style="font-size: 14px; color: var(--mut);">/mo</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">{{ starterCaption }}</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Built for teams up to ~3</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For agencies ready to leave spreadsheets and shared inboxes behind.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Unlimited clients, policies &amp; documents</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>AI document extraction &amp; autofill</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Client portal &amp; certificate issuance</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Carrier + IVANS sync</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Email support</span></div>
+            <!-- back: live Cal.com embed -->
+            <div style="position: absolute; inset: 0; transform: rotateY(180deg); backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 16px 40px -20px rgba(29,27,22,0.18);">
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--hair); background: var(--on-accent);">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut);">PICK A TIME · 20 MIN · CAL.COM</div>
+                <button onClick="{{ unflipCal }}" style="background: none; border: 1px solid var(--line3); color: var(--mut); border-radius: 7px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; padding: 4px 10px; cursor: pointer;" style-hover="border-color: var(--accent); color: var(--accent);">↩ BACK</button>
+              </div>
+              <div ref="{{ calMountRef }}" style="flex: 1; overflow: auto; background: var(--card);"></div>
+            </div>
           </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--accent) !important; color: var(--on-accent) !important;">Get started</a>
-        </div>
-
-        <div style="border: 1px solid var(--accent); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column; position: relative;">
-          <div style="position: absolute; top: -13px; left: 28px; background: var(--accent); color: var(--on-accent); font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 999px;">MOST AGENCIES START HERE</div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px; margin-top: 6px;">GROWING AGENCIES</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Growth</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">{{ growthPrice }}</span><span style="font-size: 14px; color: var(--mut);">/mo</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">{{ growthCaption }}</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Built for teams up to ~5</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For P&amp;C and commercial books ready to run on AI.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Everything in Starter</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>2 AI voice agents — 1,000 min/mo pooled</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Deep extraction — IFTA, DOT &amp; safety lookups</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Renewal radar &amp; remarket prep</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Team roles &amp; SSO</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Priority onboarding &amp; email support</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--on-accent) !important; color: var(--accent) !important;">Get started</a>
-        </div>
-
-        <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column;">
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px;">MULTI-LOCATION &amp; MGAs</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Scale</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">Custom</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">&nbsp;</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Sized to your agency</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For multi-location agencies, MGAs and wholesalers.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Everything in Growth</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>As many AI agents as you need &mdash; custom minutes</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Multi-location &amp; multi-brand support</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Custom carrier &amp; AMS integrations</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Dedicated account manager</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Volume-based pricing</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--accent) !important; color: var(--on-accent) !important;">Talk to sales</a>
         </div>
       </div>
-
-      <div style="margin-top: 32px; font-size: 14.5px; color: var(--mut); text-align: center;">Every plan: free migration, 1-on-1 onboarding, month-to-month billing. <a href="{{ phoneHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">Call {{ phoneDisplay }}</a> if you'd rather talk it through.</div>
     </div>
   </section>
 
@@ -224,19 +194,54 @@
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;calLink&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;starlight&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Booking&quot; }
+}">
 class Component extends DCLogic {
-  state = { billing: 'monthly' };
+  state = { calFlipped: false };
 
-  // Contact details are base64-encoded in source and decoded only at render
-  // time, so a plain-text/regex scraper reading the page HTML finds nothing.
   _decode(b64) { return atob(b64); }
 
-  _pillStyle(active) {
-    const base = 'border: none; cursor: pointer; font-family: "Instrument Sans", sans-serif; font-size: 14px; font-weight: 600; padding: 9px 18px; border-radius: 999px; transition: background 0.15s, color 0.15s; display: flex; align-items: center;';
-    return active
-      ? base + ' background: var(--ink); color: var(--on-accent);'
-      : base + ' background: transparent; color: var(--mut);';
+  componentDidMount() {
+    // Auto-reveal the live calendar shortly after load — no click required.
+    // The button remains as a way to skip the short wait.
+    this._autoTimer = setTimeout(() => {
+      this.setState({ calFlipped: true });
+      setTimeout(() => this._initCal(), 60);
+    }, 500);
+  }
+
+  componentWillUnmount() {
+    if (this._autoTimer) clearTimeout(this._autoTimer);
+  }
+
+  _initCal() {
+    if (this._calInit) return;
+    const el = this._calRef && this._calRef.current;
+    if (!el) return;
+    this._calInit = true;
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal, ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    window.Cal("init", { origin: "https://app.cal.com" });
+    window.Cal("inline", {
+      elementOrSelector: el,
+      calLink: this.props.calLink ?? 'starlight',
+      config: { layout: "month_view", theme: "light" }
+    });
   }
 
   renderVals() {
@@ -244,10 +249,9 @@ class Component extends DCLogic {
       this._bwModeInit = true;
       try { const s = localStorage.getItem('bw-mode'); if (s === 'dark' || s === 'light') document.documentElement.dataset.mode = s; } catch (e) {}
     }
+    if (!this._calRef) this._calRef = React.createRef();
     const phone = this._decode('KzEzMTIyMDAxOTky');
     const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI=');
-    const annual = this.state.billing === 'annual';
-
     return {
       toggleMode: () => {
         const m = (document.documentElement.dataset.mode === 'dark') ? 'light' : 'dark';
@@ -259,14 +263,10 @@ class Component extends DCLogic {
       modeTitle: (document.documentElement.dataset.mode === 'dark') ? 'Switch to light mode' : 'Switch to dark mode',
       phoneHref: 'tel:' + phone,
       phoneDisplay,
-      monthlyBtnStyle: this._pillStyle(!annual),
-      annualBtnStyle: this._pillStyle(annual),
-      setMonthly: () => this.setState({ billing: 'monthly' }),
-      setAnnual: () => this.setState({ billing: 'annual' }),
-      starterPrice: annual ? '$179' : '$199',
-      starterCaption: annual ? 'billed yearly at $2,149' : '\u00A0',
-      growthPrice: annual ? '$539' : '$599',
-      growthCaption: annual ? 'billed yearly at $6,469' : '\u00A0'
+      calFlip: this.state.calFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+      calMountRef: this._calRef,
+      flipCal: () => { this.setState({ calFlipped: true }); setTimeout(() => this._initCal(), 60); },
+      unflipCal: () => { if (this._autoTimer) clearTimeout(this._autoTimer); this.setState({ calFlipped: false }); }
     };
   }
 }

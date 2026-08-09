@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pricing — Starlight</title>
-<meta name="description" content="Plans for small and mid-size P&amp;C agencies. Free concierge onboarding and migration from any AMS.">
-<meta property="og:type" content="website">
+<title>The Paperwork Tax — Starlight Blog</title>
+<meta name="description" content="What weeks of quote paperwork actually costs a commercial agency.">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="Starlight">
-<meta property="og:title" content="Pricing — Starlight">
-<meta property="og:description" content="Plans for small and mid-size P&amp;C agencies. Free concierge onboarding and migration from any AMS.">
+<meta property="og:title" content="The Paperwork Tax">
+<meta property="og:description" content="What weeks of quote paperwork actually costs a commercial agency.">
 <meta property="og:image" content="https://getstarlight.ai/og-image.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="./theme.css">
 <!-- Sets the theme before first paint so dark-mode users don't get a light flash.
      Must stay inline and blocking: an external file reintroduces the flash. -->
 <script>try{var m=localStorage.getItem('bw-mode');if(m==='dark'||m==='light')document.documentElement.dataset.mode=m}catch(e){}</script>
@@ -25,6 +24,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    :root { --bg:#F7F4EE; --ink:#1D1B16; --body:#494436; --mut:#8A8271; --mut2:#A39B88; --accent:#1E5B45; --accent-h:#164434; --on-accent:#F7F4EE; --panel:#FFFDF8; --panel2:#FAF7F0; --strip:#F2EEE3; --line:#E0D9CA; --line2:#E5DFD3; --line3:#D6CFBF; --hair:#ECE6D9; --navbg:rgba(247,244,238,0.92); --tintg:#EAF3EE; --tintgb:#BDD5C6; }
+    :root[data-mode="dark"] { --bg:#0C1410; --ink:#E8EFE9; --body:#A9BCAF; --mut:#6E8477; --mut2:#4E6459; --accent:#8FC7A8; --accent-h:#A9D8BE; --on-accent:#0C1410; --panel:#101A14; --panel2:#0E1712; --strip:#0F1812; --line:#24352C; --line2:#1E2C24; --line3:#2C3E34; --hair:#18241D; --navbg:rgba(12,20,16,0.9); --tintg:#12211A; --tintgb:#2C3E34; }
+    body { margin: 0; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; transition: background 0.25s ease, color 0.25s ease; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-h); }
+    @media (max-width: 1000px) {
+      .bw-navlinks { display: none !important; }
+    }
+    @media (max-width: 620px) {
+      .bw-phone-label { display: none !important; }
+    }
+  </style>
 </helmet>
 
 <div style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: var(--ink); background: var(--bg); min-height: 100vh;">
@@ -48,7 +62,7 @@
         <a href="Starlight Landing.dc.html#migration" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Migration</a>
         <a href="Starlight Landing.dc.html#fill" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Fill engine</a>
         <a href="Trust.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Trust</a>
-        <a href="Pricing.dc.html" style="color: var(--accent); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
+        <a href="Pricing.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
         <a href="Contact.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Contact</a>
       </nav>
       <div style="display: flex; gap: 20px; align-items: center;">
@@ -68,86 +82,69 @@
     </div>
   </header>
 
-  <!-- ══ Pricing ══ -->
-  <section data-screen-label="Pricing">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 90px 32px 110px;">
-      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">PRICING</div>
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 22px; flex-wrap: wrap;">
-        <h2 class="bw-h2" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 46px; letter-spacing: -0.01em; margin: 0; max-width: 580px; line-height: 1.08;">One flat price. Every seat included.</h2>
-        <p style="font-size: 16px; color: var(--body); margin: 0; max-width: 400px; text-wrap: pretty;">No per-seat tax like the legacy AMS players charge. Add producers and CSRs freely — the price is set by the plan, not your headcount.</p>
-      </div>
-
-      <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; color: var(--accent); margin-bottom: 18px;">You write the business. We work the file.</div>
-
-      <div style="display: flex; justify-content: center; margin-bottom: 44px;">
-        <div style="display: inline-flex; background: var(--track); border-radius: 999px; padding: 4px; gap: 2px;">
-          <button onClick="{{ setMonthly }}" style="{{ monthlyBtnStyle }}">Monthly</button>
-          <button onClick="{{ setAnnual }}" style="{{ annualBtnStyle }}">Annual <span style="background: var(--accent); color: var(--on-accent); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.04em; padding: 2px 7px; border-radius: 999px; margin-left: 6px;">SAVE 10%</span></button>
-        </div>
-      </div>
-
-      <div class="bw-g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-        <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column;">
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px;">INDEPENDENT &amp; SMALL TEAMS</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Starter</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">{{ starterPrice }}</span><span style="font-size: 14px; color: var(--mut);">/mo</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">{{ starterCaption }}</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Built for teams up to ~3</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For agencies ready to leave spreadsheets and shared inboxes behind.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Unlimited clients, policies &amp; documents</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>AI document extraction &amp; autofill</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Client portal &amp; certificate issuance</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Carrier + IVANS sync</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Email support</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--accent) !important; color: var(--on-accent) !important;">Get started</a>
-        </div>
-
-        <div style="border: 1px solid var(--accent); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column; position: relative;">
-          <div style="position: absolute; top: -13px; left: 28px; background: var(--accent); color: var(--on-accent); font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 999px;">MOST AGENCIES START HERE</div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px; margin-top: 6px;">GROWING AGENCIES</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Growth</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">{{ growthPrice }}</span><span style="font-size: 14px; color: var(--mut);">/mo</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">{{ growthCaption }}</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Built for teams up to ~5</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For P&amp;C and commercial books ready to run on AI.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Everything in Starter</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>2 AI voice agents — 1,000 min/mo pooled</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Deep extraction — IFTA, DOT &amp; safety lookups</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Renewal radar &amp; remarket prep</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Team roles &amp; SSO</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Priority onboarding &amp; email support</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--on-accent) !important; color: var(--accent) !important;">Get started</a>
-        </div>
-
-        <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column;">
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px;">MULTI-LOCATION &amp; MGAs</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Scale</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">Custom</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">&nbsp;</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Sized to your agency</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For multi-location agencies, MGAs and wholesalers.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Everything in Growth</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>As many AI agents as you need &mdash; custom minutes</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Multi-location &amp; multi-brand support</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Custom carrier &amp; AMS integrations</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Dedicated account manager</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Volume-based pricing</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--accent) !important; color: var(--on-accent) !important;">Talk to sales</a>
-        </div>
-      </div>
-
-      <div style="margin-top: 32px; font-size: 14.5px; color: var(--mut); text-align: center;">Every plan: free migration, 1-on-1 onboarding, month-to-month billing. <a href="{{ phoneHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">Call {{ phoneDisplay }}</a> if you'd rather talk it through.</div>
+  <!-- ══ Article ══ -->
+  <article data-screen-label="Blog post" style="max-width: 760px; margin: 0 auto; padding: 84px 32px 60px;">
+    <div style="display: flex; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--mut); margin-bottom: 22px; flex-wrap: wrap;">
+      <a href="Blog.dc.html" style="color: var(--accent); text-decoration: none;">← FIELD NOTES</a>
+      <span>·</span>
+      <span>№ 001</span>
+      <span>·</span>
+      <span>JULY 15, 2026</span>
+      <span>·</span>
+      <span>5 MIN READ</span>
     </div>
-  </section>
+    <h1 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 50px; letter-spacing: -0.01em; margin: 0 0 22px; line-height: 1.06;">The paperwork tax: where commercial agencies <em style="color: var(--accent);">actually</em> lose the week</h1>
+    <p style="font-size: 19px; color: var(--body); margin: 0 0 40px; line-height: 1.6; text-wrap: pretty;">Ask an agency principal what's hard right now and you'll hear the same three things: experienced account managers are retiring faster than they can be replaced, the service backlog never shrinks, and renewals keep arriving sooner than anyone's ready for. Underneath all three is the same problem — most of the work isn't insurance. It's paperwork about insurance. Here are the five places we see it compound, and what we're doing about each one.</p>
+
+    <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 40px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">01</div>
+      <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The re-keying tax</h2>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">The same client gets typed into the AMS, then into four carrier portals, then into a supplemental application, then into a certificate form. The industry has had ACORD standards for decades; the data still moves by hand. Every re-key is minutes lost and a chance to introduce the typo that becomes an endorsement request in month three.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> the <a href="Starlight Landing.dc.html#fill" style="color: var(--accent);">fill engine</a>. Data is extracted once — from an expiring dec, a loss run, an email thread — into the client record, and every application, portal form, and certificate fills from that single source. <a href="BrokerOS.dc.html#sources" style="color: var(--accent);">Every field links back to where it came from.</a></p>
+    </div>
+
+    <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 40px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">02</div>
+      <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The document chase</h2>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">A submission is only as fast as its slowest attachment. SOVs, driver lists, payroll schedules, signed apps — each one waits on a client who has a business to run. So mornings go to follow-up emails, and the marketing clock doesn't start until the folder is complete.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> <a href="BrokerOS.dc.html#delegation" style="color: var(--accent);">delegated document collection</a>. BrokerOS drafts the request, follows up by email and phone until the documents arrive, files each one against the right client and policy, and tells you when the folder is ready to market.</p>
+    </div>
+
+    <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 40px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">03</div>
+      <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The renewal crunch</h2>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">Renewals surface when the expiration report says so, and the list gets triaged by memory: the loud accounts get remarketed, the quiet ones get rolled over. Late remarketing means rate surprises for the client — and a lapsed-coverage E&amp;O claim is the kind that names the agency, not the carrier.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> renewals that <a href="BrokerOS.dc.html#tuesday" style="color: var(--accent);">assemble themselves</a>. The file opens months out with expiring terms, updated exposures, and loss runs already requested — so the renewal conversation starts with the client, not with the paperwork.</p>
+    </div>
+
+    <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 40px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">04</div>
+      <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">Death by certificate</h2>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">No single task interrupts an account manager more than certificate requests. Each COI is five minutes of lookup, generation, and logging — times thirty a day in a construction-heavy book, arriving as phone calls in the middle of everything else.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> the <a href="BrokerOS.dc.html#tuesday" style="color: var(--accent);">AI voice agent handles COI requests end to end</a> — verifies the caller, adds the holder, issues the certificate, logs it on the policy — and flags anything outside its authority to a human instead of guessing.</p>
+    </div>
+
+    <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 44px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">05</div>
+      <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The unlogged file</h2>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">Every E&amp;O defense comes down to documentation, and the most dangerous work in an agency is the work that never made it into the file: the coverage question answered on a cell phone, the "go ahead and bind it" voicemail, the promise made at renewal. When staff are stretched, logging is the first thing that slips.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> a system where logging isn't a separate step. Calls, emails, and AI actions land on the client record with <a href="BrokerOS.dc.html#audit" style="color: var(--accent);">transcripts and timestamps, automatically</a> — the audit trail is the default, not the discipline.</p>
+    </div>
+
+    <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--strip); padding: 30px 34px; margin-bottom: 8px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">THE POINT</div>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 16px; line-height: 1.65; text-wrap: pretty;">None of this asks your staff to work harder, and none of it replaces them — the fix is a management system where the paperwork does itself and people do insurance. That's the whole idea behind <a href="BrokerOS.dc.html" style="color: var(--accent);">BrokerOS</a>.</p>
+      <p style="font-size: 16.5px; color: var(--ink); margin: 0; line-height: 1.65;">If any of the five sounds like your Tuesday: <a href="BookDemo.dc.html" style="color: var(--accent); font-weight: 600;">bring us your slowest file</a> and we'll run it live.</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding: 28px 4px 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--mut2);">
+      <span>— THE STARLIGHT TEAM</span>
+      <a href="Blog.dc.html" style="color: var(--mut); text-decoration: none; border-bottom: 1px solid var(--line3);" style-hover="color: var(--accent);">ALL FIELD NOTES →</a>
+    </div>
+  </article>
 
   <!-- ══ Footer ══ -->
-  <footer data-screen-label="Footer" style="--ink:#1D1B16; --on-accent:#F7F4EE; --mut:#8A8271; background: var(--ink); color: #C9C2B2;">
+  <footer data-screen-label="Footer" style="--ink:#1D1B16; --on-accent:#F7F4EE; --mut:#8A8271; background: var(--ink); color: #C9C2B2; margin-top: 60px;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 80px 32px 40px;">
       <div style="display: flex; gap: 56px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 64px;">
         <div style="max-width: 300px;">
@@ -226,18 +223,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { billing: 'monthly' };
-
-  // Contact details are base64-encoded in source and decoded only at render
-  // time, so a plain-text/regex scraper reading the page HTML finds nothing.
   _decode(b64) { return atob(b64); }
-
-  _pillStyle(active) {
-    const base = 'border: none; cursor: pointer; font-family: "Instrument Sans", sans-serif; font-size: 14px; font-weight: 600; padding: 9px 18px; border-radius: 999px; transition: background 0.15s, color 0.15s; display: flex; align-items: center;';
-    return active
-      ? base + ' background: var(--ink); color: var(--on-accent);'
-      : base + ' background: transparent; color: var(--mut);';
-  }
 
   renderVals() {
     if (!this._bwModeInit) {
@@ -246,8 +232,6 @@ class Component extends DCLogic {
     }
     const phone = this._decode('KzEzMTIyMDAxOTky');
     const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI=');
-    const annual = this.state.billing === 'annual';
-
     return {
       toggleMode: () => {
         const m = (document.documentElement.dataset.mode === 'dark') ? 'light' : 'dark';
@@ -258,15 +242,7 @@ class Component extends DCLogic {
       modeIcon: (document.documentElement.dataset.mode === 'dark') ? '☀' : '☾',
       modeTitle: (document.documentElement.dataset.mode === 'dark') ? 'Switch to light mode' : 'Switch to dark mode',
       phoneHref: 'tel:' + phone,
-      phoneDisplay,
-      monthlyBtnStyle: this._pillStyle(!annual),
-      annualBtnStyle: this._pillStyle(annual),
-      setMonthly: () => this.setState({ billing: 'monthly' }),
-      setAnnual: () => this.setState({ billing: 'annual' }),
-      starterPrice: annual ? '$179' : '$199',
-      starterCaption: annual ? 'billed yearly at $2,149' : '\u00A0',
-      growthPrice: annual ? '$539' : '$599',
-      growthCaption: annual ? 'billed yearly at $6,469' : '\u00A0'
+      phoneDisplay
     };
   }
 }

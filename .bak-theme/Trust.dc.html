@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pricing — Starlight</title>
-<meta name="description" content="Plans for small and mid-size P&amp;C agencies. Free concierge onboarding and migration from any AMS.">
+<title>Trust, Security &amp; Compliance — Starlight</title>
+<meta name="description" content="How Starlight handles your data, your clients' data, and your E&amp;O exposure.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Starlight">
-<meta property="og:title" content="Pricing — Starlight">
-<meta property="og:description" content="Plans for small and mid-size P&amp;C agencies. Free concierge onboarding and migration from any AMS.">
+<meta property="og:title" content="Trust, Security &amp; Compliance — Starlight">
+<meta property="og:description" content="How Starlight handles your data, your clients' data, and your E&amp;O exposure.">
 <meta property="og:image" content="https://getstarlight.ai/og-image.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="./theme.css">
 <!-- Sets the theme before first paint so dark-mode users don't get a light flash.
      Must stay inline and blocking: an external file reintroduces the flash. -->
 <script>try{var m=localStorage.getItem('bw-mode');if(m==='dark'||m==='light')document.documentElement.dataset.mode=m}catch(e){}</script>
@@ -25,6 +24,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    :root { --bg:#F7F4EE; --ink:#1D1B16; --body:#494436; --mut:#8A8271; --mut2:#A39B88; --accent:#1E5B45; --accent-h:#164434; --on-accent:#F7F4EE; --panel:#FFFDF8; --panel2:#FAF7F0; --strip:#F2EEE3; --line:#E0D9CA; --line2:#E5DFD3; --line3:#D6CFBF; --hair:#ECE6D9; --hair2:#EFE9DC; --hair3:#F2EDE1; --track:#EBE5D8; --tintg:#EAF3EE; --tintgb:#BDD5C6; --tintg2:#EFF6F1; --empty:#C4BCA9; --card:#FFFFFF; --cardline:#D9D2C2; --amber:#8A6D1F; --amberline:#E2D5B4; --amberbg:#FBF6E8; --amberbg2:#FBF3DD; --hl:#F5E6B8; --stampbg:rgba(255,253,248,0.95); --navbg:rgba(247,244,238,0.92); }
+    :root[data-mode="dark"] { --bg:#0C1410; --ink:#E8EFE9; --body:#A9BCAF; --mut:#6E8477; --mut2:#4E6459; --accent:#8FC7A8; --accent-h:#A9D8BE; --on-accent:#0C1410; --panel:#101A14; --panel2:#0E1712; --strip:#0F1812; --line:#24352C; --line2:#1E2C24; --line3:#2C3E34; --hair:#18241D; --hair2:#18241D; --hair3:#141F18; --track:#1E2C24; --tintg:#12211A; --tintgb:#2C3E34; --tintg2:rgba(143,199,168,0.12); --empty:#3A4F43; --card:#121D16; --cardline:#24352C; --amber:#E8C87E; --amberline:rgba(232,200,126,0.3); --amberbg:rgba(232,200,126,0.06); --amberbg2:rgba(232,200,126,0.09); --hl:#F5E6B8; --stampbg:rgba(12,20,16,0.92); --navbg:rgba(12,20,16,0.9); }
+    body { margin: 0; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; transition: background 0.25s ease, color 0.25s ease; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    /* bw-tokens-end */
+    @keyframes bwFadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    /* responsive */
+    @media (max-width: 1000px) {
+      .bw-navlinks { display: none !important; }
+    }
+    @media (max-width: 860px) {
+      .bw-g3 { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 620px) {
+      .bw-g3 { grid-template-columns: 1fr !important; }
+      .bw-phone-label { display: none !important; }
+    }
+  </style>
 </helmet>
 
 <div style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: var(--ink); background: var(--bg); min-height: 100vh;">
@@ -47,8 +66,8 @@
         <a href="Starlight Landing.dc.html#how" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">How it works</a>
         <a href="Starlight Landing.dc.html#migration" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Migration</a>
         <a href="Starlight Landing.dc.html#fill" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Fill engine</a>
-        <a href="Trust.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Trust</a>
-        <a href="Pricing.dc.html" style="color: var(--accent); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
+        <a href="Trust.dc.html" style="color: var(--accent); text-decoration: none;" style-hover="color: var(--accent);">Trust</a>
+        <a href="Pricing.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
         <a href="Contact.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Contact</a>
       </nav>
       <div style="display: flex; gap: 20px; align-items: center;">
@@ -68,81 +87,59 @@
     </div>
   </header>
 
-  <!-- ══ Pricing ══ -->
-  <section data-screen-label="Pricing">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 90px 32px 110px;">
-      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">PRICING</div>
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 22px; flex-wrap: wrap;">
-        <h2 class="bw-h2" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 46px; letter-spacing: -0.01em; margin: 0; max-width: 580px; line-height: 1.08;">One flat price. Every seat included.</h2>
-        <p style="font-size: 16px; color: var(--body); margin: 0; max-width: 400px; text-wrap: pretty;">No per-seat tax like the legacy AMS players charge. Add producers and CSRs freely — the price is set by the plan, not your headcount.</p>
+  <!-- ══ Trust & Security ══ -->
+  <section data-screen-label="Trust and Security" style="max-width: 1200px; margin: 0 auto; padding: 90px 32px 110px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">TRUST &amp; SECURITY</div>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 56px; flex-wrap: wrap;">
+      <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 46px; letter-spacing: -0.01em; margin: 0; max-width: 580px; line-height: 1.08;">Your clients' data is the business. <em style="color: var(--accent);">We treat it that way.</em></h2>
+      <p style="font-size: 16px; color: var(--body); margin: 0; max-width: 400px; text-wrap: pretty;">Everything brokers get audited on — privacy, retention, access — is a first-class feature here, not an add-on. And nothing about your book is ever held hostage.</p>
+    </div>
+
+    <div class="bw-g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 40px; margin-bottom: 56px;">
+      <div style="border-top: 1px solid var(--line3); padding-top: 18px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">SOVEREIGNTY</div>
+        <h3 style="font-size: 18px; font-weight: 600; margin: 0 0 8px;">Data stays in your region</h3>
+        <p style="font-size: 14.5px; color: var(--body); margin: 0; text-wrap: pretty;">Canadian books stay in Canada, U.S. books in the U.S. You pick the residency at setup — it never moves without you.</p>
       </div>
-
-      <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; color: var(--accent); margin-bottom: 18px;">You write the business. We work the file.</div>
-
-      <div style="display: flex; justify-content: center; margin-bottom: 44px;">
-        <div style="display: inline-flex; background: var(--track); border-radius: 999px; padding: 4px; gap: 2px;">
-          <button onClick="{{ setMonthly }}" style="{{ monthlyBtnStyle }}">Monthly</button>
-          <button onClick="{{ setAnnual }}" style="{{ annualBtnStyle }}">Annual <span style="background: var(--accent); color: var(--on-accent); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.04em; padding: 2px 7px; border-radius: 999px; margin-left: 6px;">SAVE 10%</span></button>
-        </div>
+      <div style="border-top: 1px solid var(--line3); padding-top: 18px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">PII</div>
+        <h3 style="font-size: 18px; font-weight: 600; margin: 0 0 8px;">PII-safe AI by design</h3>
+        <p style="font-size: 14.5px; color: var(--body); margin: 0; text-wrap: pretty;">Client PII is masked inside AI workflows — voice agents and extractors see only the fields a task needs, nothing more.</p>
       </div>
-
-      <div class="bw-g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-        <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column;">
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px;">INDEPENDENT &amp; SMALL TEAMS</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Starter</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">{{ starterPrice }}</span><span style="font-size: 14px; color: var(--mut);">/mo</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">{{ starterCaption }}</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Built for teams up to ~3</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For agencies ready to leave spreadsheets and shared inboxes behind.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Unlimited clients, policies &amp; documents</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>AI document extraction &amp; autofill</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Client portal &amp; certificate issuance</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Carrier + IVANS sync</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Email support</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--accent) !important; color: var(--on-accent) !important;">Get started</a>
-        </div>
-
-        <div style="border: 1px solid var(--accent); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column; position: relative;">
-          <div style="position: absolute; top: -13px; left: 28px; background: var(--accent); color: var(--on-accent); font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 999px;">MOST AGENCIES START HERE</div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px; margin-top: 6px;">GROWING AGENCIES</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Growth</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">{{ growthPrice }}</span><span style="font-size: 14px; color: var(--mut);">/mo</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">{{ growthCaption }}</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Built for teams up to ~5</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For P&amp;C and commercial books ready to run on AI.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Everything in Starter</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>2 AI voice agents — 1,000 min/mo pooled</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Deep extraction — IFTA, DOT &amp; safety lookups</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Renewal radar &amp; remarket prep</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Team roles &amp; SSO</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Priority onboarding &amp; email support</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--on-accent) !important; color: var(--accent) !important;">Get started</a>
-        </div>
-
-        <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 32px 28px; display: flex; flex-direction: column;">
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut); margin-bottom: 14px;">MULTI-LOCATION &amp; MGAs</div>
-          <h3 style="font-size: 24px; font-weight: 600; margin: 0 0 4px; font-family: 'Instrument Serif', serif;">Scale</h3>
-          <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: 'Instrument Serif', serif; font-size: 32px; color: var(--ink);">Custom</span></div>
-          <div style="font-size: 12px; color: var(--mut); margin-bottom: 8px; min-height: 16px;">&nbsp;</div>
-          <div style="font-size: 12.5px; color: var(--mut); margin-bottom: 16px;">Sized to your agency</div>
-          <p style="font-size: 14px; color: var(--mut); margin: 0 0 22px; text-wrap: pretty;">For multi-location agencies, MGAs and wholesalers.</p>
-          <div style="display: flex; flex-direction: column; margin-bottom: 26px;">
-            <div style="display: flex; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Everything in Growth</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>As many AI agents as you need &mdash; custom minutes</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Multi-location &amp; multi-brand support</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Custom carrier &amp; AMS integrations</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Dedicated account manager</span></div>
-            <div style="display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--body);"><span style="color: var(--accent); flex-shrink: 0;">✓</span><span>Volume-based pricing</span></div>
-          </div>
-          <a href="BookDemo.dc.html" style="margin-top: auto; text-align: center; color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px 18px; border-radius: 9px; border: 1px solid var(--accent); transition: background 0.15s, color 0.15s;" style-hover="background: var(--accent) !important; color: var(--on-accent) !important;">Talk to sales</a>
-        </div>
+      <div style="border-top: 1px solid var(--line3); padding-top: 18px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">ENCRYPTION</div>
+        <h3 style="font-size: 18px; font-weight: 600; margin: 0 0 8px;">Encrypted end to end</h3>
+        <p style="font-size: 14.5px; color: var(--body); margin: 0; text-wrap: pretty;">AES-256 at rest, TLS 1.3 in transit — documents, transcripts and call recordings included. Keys rotated on schedule.</p>
       </div>
+      <div style="border-top: 1px solid var(--line3); padding-top: 18px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">COMPLIANCE</div>
+        <h3 style="font-size: 18px; font-weight: 600; margin: 0 0 8px;">Audit-ready by default</h3>
+        <p style="font-size: 14.5px; color: var(--body); margin: 0; text-wrap: pretty;">PIPEDA, AMF (Québec) and state-regulation aware workflows, retention rules, and E&amp;O-ready trails on every client record.</p>
+      </div>
+      <div style="border-top: 1px solid var(--line3); padding-top: 18px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">ACCESS</div>
+        <h3 style="font-size: 18px; font-weight: 600; margin: 0 0 8px;">Everyone gets their own login</h3>
+        <p style="font-size: 14.5px; color: var(--body); margin: 0; text-wrap: pretty;">You decide what each principal, producer and CSR can see and do. Staff sign in with their work Microsoft or Google account, and every action is logged with a name and a timestamp.</p>
+      </div>
+      <div style="border-top: 1px solid var(--line3); padding-top: 18px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">PORTABILITY</div>
+        <h3 style="font-size: 18px; font-weight: 600; margin: 0 0 8px;">No lock-in, ever</h3>
+        <p style="font-size: 14.5px; color: var(--body); margin: 0; text-wrap: pretty;">Export your full book in open formats any day, at no charge. We keep customers with product, not contracts.</p>
+      </div>
+    </div>
 
-      <div style="margin-top: 32px; font-size: 14.5px; color: var(--mut); text-align: center;">Every plan: free migration, 1-on-1 onboarding, month-to-month billing. <a href="{{ phoneHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);">Call {{ phoneDisplay }}</a> if you'd rather talk it through.</div>
+    <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--strip); padding: 24px 30px; display: flex; gap: 18px 44px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent);">THE TERMS</div>
+      <div style="display: flex; gap: 14px 36px; flex-wrap: wrap; font-size: 14.5px; color: var(--body);">
+        <span>Month-to-month — no multi-year contracts</span>
+        <span>Free migration in <em>and</em> out</span>
+        <span>1-on-1 onboarding</span>
+        <span>Human support, answers in hours</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; text-align: center;">
+      <a href="BookDemo.dc.html" style="display: inline-block; background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 15px; font-weight: 600; padding: 14px 24px; border-radius: 10px; transition: background 0.15s;" style-hover="background: var(--accent-h);">Book a demo →</a>
     </div>
   </section>
 
@@ -226,18 +223,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { billing: 'monthly' };
-
-  // Contact details are base64-encoded in source and decoded only at render
-  // time, so a plain-text/regex scraper reading the page HTML finds nothing.
   _decode(b64) { return atob(b64); }
-
-  _pillStyle(active) {
-    const base = 'border: none; cursor: pointer; font-family: "Instrument Sans", sans-serif; font-size: 14px; font-weight: 600; padding: 9px 18px; border-radius: 999px; transition: background 0.15s, color 0.15s; display: flex; align-items: center;';
-    return active
-      ? base + ' background: var(--ink); color: var(--on-accent);'
-      : base + ' background: transparent; color: var(--mut);';
-  }
 
   renderVals() {
     if (!this._bwModeInit) {
@@ -246,8 +232,6 @@ class Component extends DCLogic {
     }
     const phone = this._decode('KzEzMTIyMDAxOTky');
     const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI=');
-    const annual = this.state.billing === 'annual';
-
     return {
       toggleMode: () => {
         const m = (document.documentElement.dataset.mode === 'dark') ? 'light' : 'dark';
@@ -258,15 +242,7 @@ class Component extends DCLogic {
       modeIcon: (document.documentElement.dataset.mode === 'dark') ? '☀' : '☾',
       modeTitle: (document.documentElement.dataset.mode === 'dark') ? 'Switch to light mode' : 'Switch to dark mode',
       phoneHref: 'tel:' + phone,
-      phoneDisplay,
-      monthlyBtnStyle: this._pillStyle(!annual),
-      annualBtnStyle: this._pillStyle(annual),
-      setMonthly: () => this.setState({ billing: 'monthly' }),
-      setAnnual: () => this.setState({ billing: 'annual' }),
-      starterPrice: annual ? '$179' : '$199',
-      starterCaption: annual ? 'billed yearly at $2,149' : '\u00A0',
-      growthPrice: annual ? '$539' : '$599',
-      growthCaption: annual ? 'billed yearly at $6,469' : '\u00A0'
+      phoneDisplay
     };
   }
 }
