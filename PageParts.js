@@ -1,13 +1,13 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("footer.html")
+    fetch("Footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("footer-container").innerHTML = data;
         });
 
     // loading components.js
-    document.querySelectorAll('script[type="text/x-dc"]').forEach(async (scriptTag) => {
+    /*document.querySelectorAll('script[type="text/x-dc"]').forEach(async (scriptTag) => {
         const scriptUrl = scriptTag.getAttribute('data-dc-script');
         const rawProps = scriptTag.getAttribute('data-props') || '{}';
         const props = JSON.parse(rawProps);
@@ -25,6 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error(`Failed to load DC component from ${scriptUrl}:`, error);
             }
         }
-    });
+    });*/
 
 });
