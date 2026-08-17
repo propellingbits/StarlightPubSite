@@ -81,8 +81,64 @@ a:hover { color: var(--accent-h); }
 @keyframes bwBarIn  { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
+/* Mobile nav. Below 1000px .bw-navlinks is hidden, so the burger and the
+   drop-down panel below it are the only navigation — keep the three rules
+   (.bw-navlinks off, .bw-navburger on, .bw-mobilemenu on) at the same
+   breakpoint or the site loses its menu entirely on phones. */
+.bw-navburger { display: none; }
+.bw-mobilemenu {
+  display: none;
+  flex-direction: column;         /* without this the links lay out in a row and
+                                     the last ones overflow off-screen */
+  background: var(--bg);
+  border-top: 1px solid var(--line2);
+  padding: 4px 20px 14px;
+  max-height: calc(100vh - 66px);
+  overflow-y: auto;               /* short viewports still reach every link */
+}
+.bw-mobilemenu a {
+  padding: 13px 4px;               /* ~44px tap target with the font size below */
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hair);
+}
+.bw-mobilemenu a:last-child { border-bottom: none; }
+/* Primary CTA at the foot of the mobile panel. Below 1000px the burger is the
+   only navigation, so the demo booking action has to live in here. */
+.bw-mobilemenu a.bw-mobilecta {
+  margin-top: 14px;
+  padding: 14px 18px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-bottom: none;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Phone strip under the announcement bar. Appears at exactly the width where
+   .bw-phone-label disappears from the header (620px), so the number is always
+   readable somewhere rather than collapsing to a bare icon. */
+.bw-phonestrip { display: none; }
+@media (max-width: 620px) {
+  .bw-phonestrip {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 9px;
+    padding: 9px 20px;
+    background: var(--strip);
+    border-bottom: 1px solid var(--line2);
+    text-decoration: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .bw-navlinks { display: none !important; }
+  .bw-navburger { display: flex !important; }
+  .bw-mobilemenu { display: flex; }
   .bw-fluid { min-width: 0 !important; flex-basis: 100% !important; }
   .bw-legal { grid-template-columns: 1fr !important; }
   .bw-toc { position: static !important; }

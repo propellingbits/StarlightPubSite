@@ -1,47 +1,46 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Starlight — page-level scripts shared by every page.
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetch("Footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-container").innerHTML = data;
-        });
-    googleAnalytics();
+   Loaded from each page's real <head> with:
+       <script src="./PageParts.js" defer></script>
 
-    //MS clarity
-    (function(c,l,a,r,i,t,y){
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "y20gthhmip");
-    
-    // loading components.js
-    /*document.querySelectorAll('script[type="text/x-dc"]').forEach(async (scriptTag) => {
-        const scriptUrl = scriptTag.getAttribute('data-dc-script');
-        const rawProps = scriptTag.getAttribute('data-props') || '{}';
-        const props = JSON.parse(rawProps);
+   `defer` keeps it off the critical path: it runs after parsing, before
+   DOMContentLoaded, and neither tracker blocks render.
 
-        if (scriptUrl) {
-            try {
-                // Fetch and execute the external component file
-                const response = await fetch(scriptUrl);
-                const scriptContent = await response.text();
+   NOTE — the footer used to be fetched here and injected into
+   #footer-container. That could never work: the container lived inside <x-dc>,
+   and the runtime replaces that whole subtree on boot (support.js:166), so the
+   injected markup was always discarded. It also left the footer's 32
+   `style-hover` attributes inert, since those are compiled by the DC runtime
+   rather than being real HTML. The footer is now a proper Design Component —
+   see Footer.dc.html and the <dc-import name="Footer"> on each page.
+   ═══════════════════════════════════════════════════════════════════════════ */
 
-                // Execute code and make props available to it
-                const runComponent = new Function('props', scriptContent);
-                runComponent(props);
-            } catch (error) {
-                console.error(`Failed to load DC component from ${scriptUrl}:`, error);
-            }
-        }
-    });*/
+(function () {
+  "use strict";
 
-});
+  var GA_ID = "G-3NNPMHP6Y3";
+  var CLARITY_ID = "y20gthhmip";
 
-function googleAnalytics() {
-    
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {dataLayer.push(arguments); }
-    gtag('js', new Date());
+  // ── Google Analytics ────────────────────────────────────────────────────
+  // dataLayer and gtag() must exist before gtag.js finishes loading; the tag
+  // replays anything queued once it arrives.
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
 
-    gtag('config', 'G-3NNPMHP6Y3');    
-}
+  gtag("js", new Date());
+  gtag("config", GA_ID);
+
+  var ga = document.createElement("script");
+  ga.async = true;
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(ga);
+
+  // ── Microsoft Clarity ───────────────────────────────────────────────────
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", CLARITY_ID);
+})();
