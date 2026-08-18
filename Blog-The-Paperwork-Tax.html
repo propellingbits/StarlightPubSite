@@ -18,6 +18,7 @@
      Must stay inline and blocking: an external file reintroduces the flash. -->
 <script>try{var m=localStorage.getItem('bw-mode');if(m==='dark'||m==='light')document.documentElement.dataset.mode=m}catch(e){}</script>
 <script src="./PageParts.js" defer></script>
+<script src="./site.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -36,7 +37,7 @@
   <!-- ══ Article ══ -->
   <article data-screen-label="Blog post" style="max-width: 760px; margin: 0 auto; padding: 84px 32px 60px;">
     <div style="display: flex; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--mut); margin-bottom: 22px; flex-wrap: wrap;">
-      <a href="Blog.dc.html" style="color: var(--accent); text-decoration: none;">← FIELD NOTES</a>
+      <a href="Blog.html" style="color: var(--accent); text-decoration: none;">← FIELD NOTES</a>
       <span>·</span>
       <span>№ 001</span>
       <span>·</span>
@@ -51,46 +52,46 @@
       <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">01</div>
       <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The re-keying tax</h2>
       <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">The same client gets typed into the AMS, then into four carrier portals, then into a supplemental application, then into a certificate form. The industry has had ACORD standards for decades; the data still moves by hand. Every re-key is minutes lost and a chance to introduce the typo that becomes an endorsement request in month three.</p>
-      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> the <a href="index.html#fill" style="color: var(--accent);">fill engine</a>. Data is extracted once — from an expiring dec, a loss run, an email thread — into the client record, and every application, portal form, and certificate fills from that single source. <a href="BrokerOS.dc.html#sources" style="color: var(--accent);">Every field links back to where it came from.</a></p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> the <a href="index.html#fill" style="color: var(--accent);">fill engine</a>. Data is extracted once — from an expiring dec, a loss run, an email thread — into the client record, and every application, portal form, and certificate fills from that single source. <a href="BrokerOS.html#sources" style="color: var(--accent);">Every field links back to where it came from.</a></p>
     </div>
 
     <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 40px;">
       <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">02</div>
       <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The document chase</h2>
       <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">A submission is only as fast as its slowest attachment. SOVs, driver lists, payroll schedules, signed apps — each one waits on a client who has a business to run. So mornings go to follow-up emails, and the marketing clock doesn't start until the folder is complete.</p>
-      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> <a href="BrokerOS.dc.html#delegation" style="color: var(--accent);">delegated document collection</a>. BrokerOS drafts the request, follows up by email and phone until the documents arrive, files each one against the right client and policy, and tells you when the folder is ready to market.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> <a href="BrokerOS.html#delegation" style="color: var(--accent);">delegated document collection</a>. BrokerOS drafts the request, follows up by email and phone until the documents arrive, files each one against the right client and policy, and tells you when the folder is ready to market.</p>
     </div>
 
     <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 40px;">
       <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">03</div>
       <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The renewal crunch</h2>
       <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">Renewals surface when the expiration report says so, and the list gets triaged by memory: the loud accounts get remarketed, the quiet ones get rolled over. Late remarketing means rate surprises for the client — and a lapsed-coverage E&amp;O claim is the kind that names the agency, not the carrier.</p>
-      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> renewals that <a href="BrokerOS.dc.html#tuesday" style="color: var(--accent);">assemble themselves</a>. The file opens months out with expiring terms, updated exposures, and loss runs already requested — so the renewal conversation starts with the client, not with the paperwork.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> renewals that <a href="BrokerOS.html#tuesday" style="color: var(--accent);">assemble themselves</a>. The file opens months out with expiring terms, updated exposures, and loss runs already requested — so the renewal conversation starts with the client, not with the paperwork.</p>
     </div>
 
     <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 40px;">
       <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">04</div>
       <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">Death by certificate</h2>
       <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">No single task interrupts an account manager more than certificate requests. Each COI is five minutes of lookup, generation, and logging — times thirty a day in a construction-heavy book, arriving as phone calls in the middle of everything else.</p>
-      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> the <a href="BrokerOS.dc.html#tuesday" style="color: var(--accent);">AI voice agent handles COI requests end to end</a> — verifies the caller, adds the holder, issues the certificate, logs it on the policy — and flags anything outside its authority to a human instead of guessing.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> the <a href="BrokerOS.html#tuesday" style="color: var(--accent);">AI voice agent handles COI requests end to end</a> — verifies the caller, adds the holder, issues the certificate, logs it on the policy — and flags anything outside its authority to a human instead of guessing.</p>
     </div>
 
     <div style="border-top: 1px solid var(--line3); padding-top: 32px; margin-bottom: 44px;">
       <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;">05</div>
       <h2 style="font-size: 24px; font-weight: 600; margin: 0 0 14px; letter-spacing: -0.01em;">The unlogged file</h2>
       <p style="font-size: 16.5px; color: var(--body); margin: 0 0 14px; line-height: 1.65; text-wrap: pretty;">Every E&amp;O defense comes down to documentation, and the most dangerous work in an agency is the work that never made it into the file: the coverage question answered on a cell phone, the "go ahead and bind it" voicemail, the promise made at renewal. When staff are stretched, logging is the first thing that slips.</p>
-      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> a system where logging isn't a separate step. Calls, emails, and AI actions land on the client record with <a href="BrokerOS.dc.html#audit" style="color: var(--accent);">transcripts and timestamps, automatically</a> — the audit trail is the default, not the discipline.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0; line-height: 1.65; text-wrap: pretty;"><strong style="color: var(--ink);">What we built:</strong> a system where logging isn't a separate step. Calls, emails, and AI actions land on the client record with <a href="BrokerOS.html#audit" style="color: var(--accent);">transcripts and timestamps, automatically</a> — the audit trail is the default, not the discipline.</p>
     </div>
 
     <div style="border: 1px solid var(--line); border-radius: 14px; background: var(--strip); padding: 30px 34px; margin-bottom: 8px;">
       <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px;">THE POINT</div>
-      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 16px; line-height: 1.65; text-wrap: pretty;">None of this asks your staff to work harder, and none of it replaces them — the fix is a management system where the paperwork does itself and people do insurance. That's the whole idea behind <a href="BrokerOS.dc.html" style="color: var(--accent);">BrokerOS</a>.</p>
-      <p style="font-size: 16.5px; color: var(--ink); margin: 0; line-height: 1.65;">If any of the five sounds like your Tuesday: <a href="BookDemo.dc.html" style="color: var(--accent); font-weight: 600;">bring us your slowest file</a> and we'll run it live.</p>
+      <p style="font-size: 16.5px; color: var(--body); margin: 0 0 16px; line-height: 1.65; text-wrap: pretty;">None of this asks your staff to work harder, and none of it replaces them — the fix is a management system where the paperwork does itself and people do insurance. That's the whole idea behind <a href="BrokerOS.html" style="color: var(--accent);">BrokerOS</a>.</p>
+      <p style="font-size: 16.5px; color: var(--ink); margin: 0; line-height: 1.65;">If any of the five sounds like your Tuesday: <a href="BookDemo.html" style="color: var(--accent); font-weight: 600;">bring us your slowest file</a> and we'll run it live.</p>
     </div>
 
     <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding: 28px 4px 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--mut2);">
       <span>— THE STARLIGHT TEAM</span>
-      <a href="Blog.dc.html" style="color: var(--mut); text-decoration: none; border-bottom: 1px solid var(--line3);" style-hover="color: var(--accent);">ALL FIELD NOTES →</a>
+      <a href="Blog.html" style="color: var(--mut); text-decoration: none; border-bottom: 1px solid var(--line3);" style-hover="color: var(--accent);">ALL FIELD NOTES →</a>
     </div>
   </article>
 
@@ -98,31 +99,5 @@
   <dc-import name="Footer" hint-size="100%,420px"></dc-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  _decode(b64) { return atob(b64); }
-
-  renderVals() {
-    if (!this._bwModeInit) {
-      this._bwModeInit = true;
-      try { const s = localStorage.getItem('bw-mode'); if (s === 'dark' || s === 'light') document.documentElement.dataset.mode = s; } catch (e) {}
-    }
-    const phone = this._decode('KzEzMTIyMDAxOTky');
-    const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI=');
-    return {
-      toggleMode: () => {
-        const m = (document.documentElement.dataset.mode === 'dark') ? 'light' : 'dark';
-        try { localStorage.setItem('bw-mode', m); } catch (e) {}
-        try { document.documentElement.dataset.mode = m; } catch (e) {}
-        this.forceUpdate();
-      },
-      modeIcon: (document.documentElement.dataset.mode === 'dark') ? '☀' : '☾',
-      modeTitle: (document.documentElement.dataset.mode === 'dark') ? 'Switch to light mode' : 'Switch to dark mode',
-      phoneHref: 'tel:' + phone,
-      phoneDisplay
-    };
-  }
-}
-</script>
 </body>
 </html>

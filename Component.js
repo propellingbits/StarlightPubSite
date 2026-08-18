@@ -101,7 +101,7 @@ class Component extends DCLogic {
     // — real users and screen readers still get normal tel:/mailto: links.
     _decode(b64) { return atob(b64); }
 
-    // Cross-page links (e.g. Contact.dc.html -> "Starlight Landing.dc.html#platform") land here
+    // Cross-page links (e.g. Contact.html -> "Starlight Landing.dc.html#platform") land here
     // with a #hash before this component has finished its first mount, so the browser's
     // native scroll-to-anchor fires too early and misses. Retry until the target exists.
     _scrollToHash() {

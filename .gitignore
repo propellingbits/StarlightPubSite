@@ -1,0 +1,13 @@
+# Visual Studio local state — per-machine, not part of the site
+.vs/
+
+# Scratch backups taken before bulk refactors
+.bak-*/
+
+# OS / editor cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
