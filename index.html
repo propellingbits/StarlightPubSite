@@ -161,7 +161,7 @@
                                         <!-- SMS thread · step 2/3 -->
                                         <sc-if value="{{ textMode }}" hint-placeholder-val="{{ false }}">
                                             <div style="width: 100%; flex: 1; display: flex; flex-direction: column; gap: 8px; overflow: hidden;">
-                                                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #6E8477; text-align: center; margin-bottom: 2px;">→ MARIA · LAURIER TRANSPORT</div>
+                                                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #6E8477; text-align: center; margin-bottom: 2px;">→ MARIA · Lauxier TRANSPORT</div>
                                                 <sc-for list="{{ smsList }}" as="m" hint-placeholder-count="2">
                                                     <div style="display: flex; justify-content: {{ m.justify }};">
                                                         <div style="max-width: 84%; background: {{ m.bg }}; color: {{ m.color }}; border-radius: {{ m.radius }}; padding: 7px 10px; font-size: 10.5px; line-height: 1.45; animation: bwFadeUp 0.35s ease both;">{{ m.text }}</div>
@@ -187,7 +187,7 @@
                                                 <div style="position: absolute; inset: 0; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Instrument Serif', serif; font-size: 26px; color: var(--on-accent);">A</div>
                                             </div>
                                             <div style="font-size: 14px; font-weight: 600; color: #F1F4EF;">Ava · AI Agent</div>
-                                            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #6E8477; margin: 4px 0 8px;">→ MARIA · LAURIER TRANSPORT</div>
+                                            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #6E8477; margin: 4px 0 8px;">→ MARIA · Lauxier TRANSPORT</div>
                                             <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8FC7A8; min-height: 16px;">{{ callState }}</div>
                                             <sc-if value="{{ agentSpeaking }}" hint-placeholder-val="{{ false }}">
                                                 <div style="display: flex; gap: 3px; align-items: flex-end; height: 14px; margin-top: 8px;">
@@ -350,7 +350,7 @@
                         <div style="background: #17251F; color: #D8E4DC; display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em;">
                             <div style="display: flex; align-items: center; gap: 9px;">
                                 <span style="width: 8px; height: 8px; border-radius: 50%; background: #8FC7A8; animation: bwPulse 1.4s infinite;"></span>
-                                LAURIER TRANSPORT INC. — MOTOR CARRIER APPLICATION
+                                Lauxier TRANSPORT INC. — MOTOR CARRIER APPLICATION
                             </div>
                             <div style="display: flex; align-items: center; gap: 16px;">
                                 <span style="color: {{ fillStatusColor }};">{{ fillStatus }}</span>
@@ -560,7 +560,7 @@
                 <div class="bw-g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
                     <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 20px;">
                         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: var(--mut2); margin-bottom: 16px;">TEXT · TUE 10:46:11</div>
-                        <div style="background: var(--accent); color: var(--on-accent); border-radius: 12px 12px 3px 12px; padding: 10px 12px; font-size: 12.5px; line-height: 1.5; margin-bottom: 12px;">Hi Maria — Ava for Northgate on Laurier's renewal. Three underwriting items left to finish it. Mind replying when you have a sec?</div>
+                        <div style="background: var(--accent); color: var(--on-accent); border-radius: 12px 12px 3px 12px; padding: 10px 12px; font-size: 12.5px; line-height: 1.5; margin-bottom: 12px;">Hi Maria — Ava for Northgate on Lauxier's renewal. Three underwriting items left to finish it. Mind replying when you have a sec?</div>
                         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--accent);">CONSENT LOGGED · TRANSCRIPT FILED ✓</div>
                     </div>
                     <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 20px;">
@@ -589,7 +589,7 @@
                                 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; color: var(--mut);">OUTBOUND · 4 MIN · BUSINESS HOURS</div>
                             </div>
                         </div>
-                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--accent); line-height: 1.9;">RECORDED ✓ · SUMMARIZED ✓<br>FILED TO LAURIER TRANSPORT ✓</div>
+                        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--accent); line-height: 1.9;">RECORDED ✓ · SUMMARIZED ✓<br>FILED TO Lauxier TRANSPORT ✓</div>
                     </div>
                 </div>
             </section>
@@ -710,8 +710,8 @@
           state = { g: 0, booked: false, follow: true };
 
           FIELDS = [
-            { label: 'APPLICANT', value: 'Laurier Transport Inc.', src: 'WEB' },
-            { label: 'NIR / MC NO.', value: '2841177 · MC-884120', src: 'WEB' },
+            { label: 'APPLICANT', value: 'Lauxier Transport Inc.', src: 'WEB' },
+            { label: 'NIR / MC NO.', value: '8251177 · MC-996120', src: 'WEB' },
             { label: 'IN BUSINESS SINCE', value: '2013', src: 'WEB' },
             { label: 'VEHICLES · SEC 8', value: '6 units · $742K listed', src: 'FILE' },
             { label: 'DRIVERS · SEC 16', value: '5 · 0 demerit pts', src: 'FILE' },
@@ -724,7 +724,7 @@
           // Step 3/3 \u2014 the call, triggered ONLY because the two texts went
           // unanswered. It collects all three outstanding items.
           LINES = [
-            { t: 64,  who: 'agent',  text: "Hi Maria \u2014 Ava for Northgate on Laurier's renewal. I texted a couple of times; catching you now to verify three underwriting items." },
+            { t: 64,  who: 'agent',  text: "Hi Maria \u2014 Ava for Northgate on Lauxier's renewal. I texted a couple of times; catching you now to verify three underwriting items." },
             { t: 71,  who: 'client', text: "Oh \u2014 sorry, missed those. Go ahead." },
             { t: 75,  who: 'agent',  text: "Section 11 \u2014 will you use non-owned trailers this term? How many under your care at once, and the average value?" },
             { t: 82,  who: 'client', text: "Yes \u2014 interchange reefers. Never more than four at a time, about sixty thousand each." },
@@ -738,7 +738,7 @@
           // Step 2/3 \u2014 two outbound texts. The client does NOT reply; that
           // silence is exactly what escalates to the call in step 3.
           SMS = [
-            { t: 37, who: 'agent', text: "Hi Maria \u2014 Ava with Northgate on Laurier's renewal. A couple of quick underwriting items left to finish it. Mind replying when you have a sec?" },
+            { t: 37, who: 'agent', text: "Hi Maria \u2014 Ava with Northgate on Lauxier's renewal. A couple of quick underwriting items left to finish it. Mind replying when you have a sec?" },
             { t: 46, who: 'agent', text: "Following up on my earlier note \u2014 still need those items to wrap your renewal. I'll give you a quick call if that's easier." }
           ];
 
@@ -793,7 +793,7 @@
             { name: '+ 21 more', share: 34 }
           ];
           FILL_FIELDS = [
-            { label: 'LEGAL NAME', value: 'Laurier Transport Inc.', src: 'client-docs' },
+            { label: 'LEGAL NAME', value: 'Lauxier Transport Inc.', src: 'client-docs' },
             { label: 'DOT / NIR \u2116', value: '2841177', src: 'registrations' },
             { label: 'POWER UNITS', value: '18', src: 'registrations' },
             { label: 'TRAILERS', value: '22 \u00b7 dry van, reefer', src: 'section-11' },
