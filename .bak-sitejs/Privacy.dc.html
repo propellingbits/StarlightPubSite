@@ -15,7 +15,6 @@
      Must stay inline and blocking: an external file reintroduces the flash. -->
 <script>try{var m=localStorage.getItem('bw-mode');if(m==='dark'||m==='light')document.documentElement.dataset.mode=m}catch(e){}</script>
 <script src="./PageParts.js" defer></script>
-<script src="./site.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -142,13 +141,28 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  _decode(b64) { return atob(b64); }
   renderVals() {
-    const c = SL.contact();
+    if (!this._bwModeInit) {
+      this._bwModeInit = true;
+      try { const s = localStorage.getItem('bw-mode'); if (s === 'dark' || s === 'light') document.documentElement.dataset.mode = s; } catch (e) {}
+    }
+    const phone = this._decode('KzEzMTIyMDAxOTky');
+    const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI=');
+    const privacyEmail = this._decode('aGVsbG9AZ2V0c3RhcmxpZ2h0LmFp');
     return {
-      ...c,
-      // Same hello@ address, rendered under a page-local name.
-      privacyEmail: c.emailHello,
-      privacyHref: c.emailHelloHref
+      toggleMode: () => {
+        const m = (document.documentElement.dataset.mode === 'dark') ? 'light' : 'dark';
+        try { localStorage.setItem('bw-mode', m); } catch (e) {}
+        try { document.documentElement.dataset.mode = m; } catch (e) {}
+        this.forceUpdate();
+      },
+      modeIcon: (document.documentElement.dataset.mode === 'dark') ? '☀' : '☾',
+      modeTitle: (document.documentElement.dataset.mode === 'dark') ? 'Switch to light mode' : 'Switch to dark mode',
+      phoneHref: 'tel:' + phone,
+      phoneDisplay,
+      privacyEmail,
+      privacyHref: 'mailto:' + privacyEmail
     };
   }
 }

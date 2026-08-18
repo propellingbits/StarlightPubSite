@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Starlight — AI Broker Management for Commercial Lines</title>
+    <title>Starlight — Broker Management for Commercial Lines</title>
     <meta name="description" content="Weeks of quote paperwork, done in seconds. Clients don't send the files — Starlight's AI agents chase the documents and answer their questions, then the fill engine returns a submit-ready application.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Starlight">
@@ -18,7 +18,6 @@
          Must stay inline and blocking: an external file reintroduces the flash. -->
     <script>try { var m = localStorage.getItem('bw-mode'); if (m === 'dark' || m === 'light') document.documentElement.dataset.mode = m } catch (e) { }</script>    
     <script src="./PageParts.js" defer></script>
-    <script src="./site.js"></script>
     <script src="./support.js"></script>    
 </head>
 <body>
@@ -31,8 +30,46 @@
 
         <div style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: var(--ink); background: var(--bg); min-height: 100vh;">
 
-  <!-- ══ Announcement bar + nav ══ -->
-  <dc-import name="Nav" hint-size="100%,106px" current="home" show-bar="{{ showBar }}"></dc-import>
+            <!-- ══ Announcement bar ══ -->
+            <sc-if value="{{ showBar }}" hint-placeholder-val="{{ true }}">
+                <div style="background: #17251F; color: #D8E4DC; text-align: center; padding: 10px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                    <span style="color: #8FC7A8; letter-spacing: 0.1em;">✦</span>
+                    <span>FREE CONCIERGE ONBOARDING</span>
+                    <span style="color: #4E6459;">·</span>
+                    <span style="color: #B9C6BC;">FROM SPREADSHEETS, EMAILS, PAPERS, OR ANY AMS — LIVE IN UNDER 3 WEEKS</span>
+                    <a href="#migration" style="color: #8FC7A8; text-decoration: none; border-bottom: 1px solid #4E6459; padding-bottom: 1px;" style-hover="border-color: #8FC7A8;">DETAILS →</a>
+                </div>
+            </sc-if>
+
+            <!-- ══ Nav ══ -->
+            <header style="position: sticky; top: 0; z-index: 50; background: var(--navbg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line2);">
+                <div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+                    <a href="#top" style="font-family: 'Instrument Serif', serif; font-size: 26px; text-decoration: none; color: var(--ink); letter-spacing: -0.01em;">Starlight<span style="color: var(--accent);">.</span></a>
+                    <nav class="bw-navlinks" style="display: flex; gap: 26px; font-size: 14.5px; font-weight: 500;">
+                        <a href="BrokerOS.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">BrokerOS</a>
+                        <a href="#how" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">How it works</a>
+                        <a href="#migration" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Migration</a>
+                        <a href="#fill" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Fill engine</a>
+                        <a href="Trust.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Trust</a>
+                        <a href="Pricing.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Pricing</a>
+                        <a href="Contact.dc.html" style="color: var(--ink); text-decoration: none;" style-hover="color: var(--accent);">Contact</a>
+                    </nav>
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <button onClick="{{ toggleMode }}" title="{{ modeTitle }}" style="width: 32px; height: 32px; border-radius: 50%; background: var(--tintg); border: 1px solid var(--tintgb); color: var(--accent); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; line-height: 1; padding: 0; flex-shrink: 0;">{{ modeIcon }}</button>
+                        <a href="{{ phoneHref }}" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink);" style-hover="color: var(--accent);">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: var(--tintg); border: 1px solid var(--tintgb); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="var(--accent)" /></svg>
+                            </span>
+                            <span class="bw-phone-label" style="display: flex; flex-direction: column; line-height: 1.2; white-space: nowrap;">
+                                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: var(--mut);">TALK TO US</span>
+                                <span style="font-family: 'Instrument Sans', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: normal; color: var(--ink);">{{ phoneDisplay }}</span>
+                            </span>
+                        </a>
+                        <a href="BookDemo.dc.html" class="bw-navlinks" style="color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 500; padding: 9px 14px;" style-hover="color: var(--accent);">Sign in</a>
+                        <a href="BookDemo.dc.html" style="display: none; background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 10px 18px; border-radius: 9px; transition: background 0.15s;" style-hover="background: var(--accent-h);">Book a demo</a>
+                    </div>
+                </div>
+            </header>
 
             <!-- ══ Hero ══ -->
             <section id="top" data-screen-label="Hero" style="max-width: 1200px; margin: 0 auto; padding: 84px 32px 96px;">
@@ -49,7 +86,7 @@
                         </sc-if>
 
 
-                        <p style="font-size: 19px; line-height: 1.6; color: var(--body); margin: 0 0 34px; max-width: 520px; text-wrap: pretty;">Starlight's AI agents text and call your clients, chase the documents, answer their questions — then the fill engine turns the returned pile into a submit-ready application in under ten seconds. Your producers stay where they belong: <em style="color: var(--accent); font-style: italic; font-weight: 600;">Growing the book.</em></p>
+                        <p style="font-size: 19px; line-height: 1.6; color: var(--body); margin: 0 0 34px; max-width: 520px; text-wrap: pretty;">Starlight's AI agents text and call your clients, chase the documents, answer their questions — then the fill engine turns the returned pile into a submit-ready application in under ten seconds. Your producers stay where they belong: <em style="color: var(--accent); font-style: italic; font-weight: 600;">Growing.</em></p>
 
                         <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
                             <a href="BookDemo.dc.html" style="background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 16px; font-weight: 600; padding: 15px 26px; border-radius: 10px; transition: background 0.15s;" style-hover="background: var(--accent-h);">Book a demo</a>
@@ -350,7 +387,7 @@
                         <div style="background: #17251F; color: #D8E4DC; display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em;">
                             <div style="display: flex; align-items: center; gap: 9px;">
                                 <span style="width: 8px; height: 8px; border-radius: 50%; background: #8FC7A8; animation: bwPulse 1.4s infinite;"></span>
-                                LAURIER TRANSPORT INC. — MOTOR CARRIER APPLICATION
+                                ML EXTRACTION — MOTOR CARRIER APPLICATION
                             </div>
                             <div style="display: flex; align-items: center; gap: 16px;">
                                 <span style="color: {{ fillStatusColor }};">{{ fillStatus }}</span>
@@ -689,7 +726,7 @@
             <section id="cta" data-screen-label="Closing CTA" style="border-top: 1px solid var(--line2); background: var(--strip);">
                 <div style="max-width: 1200px; margin: 0 auto; padding: 92px 32px 100px; text-align: center;">
                     <h2 class="bw-h2" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 50px; letter-spacing: -0.01em; margin: 0 0 16px; line-height: 1.05;">Bring us your <em style="color: var(--accent);">slowest file.</em></h2>
-                    <p style="font-size: 16.5px; color: var(--body); margin: 0 auto 34px; max-width: 500px; text-wrap: pretty;">A 20-minute demo on one of your real submissions — watch it come back filled, cited and ready to send.</p>
+                    <p style="font-size: 16.5px; color: var(--body); margin: 0 auto 34px; max-width: 500px; text-wrap: pretty;">A 25-minute demo on one of your real submissions — watch it come back filled, cited and ready to send.</p>
                     <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
                         <a href="BookDemo.dc.html" style="background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 16px; font-weight: 600; padding: 15px 26px; border-radius: 10px; transition: background 0.2s ease;" style-hover="background: var(--accent-h);">Book a demo</a>
                         <a href="Pricing.dc.html" style="color: var(--ink); text-decoration: none; font-size: 16px; font-weight: 600; padding: 15px 22px; border-radius: 10px; border: 1px solid var(--line3); transition: border-color 0.2s ease;" style-hover="border-color: var(--mut);">See pricing</a>
@@ -707,7 +744,7 @@
   &quot;delegationMode&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;manual&quot;, &quot;accept-edits&quot;, &quot;plan&quot;, &quot;auto&quot;], &quot;default&quot;: &quot;plan&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;How it works&quot; }
 }">
         class Component extends DCLogic {
-          state = { g: 0, booked: false, follow: true };
+          state = { g: 0, booked: false, mode: 'light', follow: true };
 
           FIELDS = [
             { label: 'APPLICANT', value: 'Laurier Transport Inc.', src: 'WEB' },
@@ -804,6 +841,11 @@
             { label: 'PRIOR CLAIMS \u00b7 5 YRS', value: '2 \u00b7 $41K paid', src: 'loss-runs' }
           ];
 
+          // Contact details are base64-encoded in source and decoded only at render
+          // time, so a plain-text/regex scraper reading the page HTML finds nothing
+          // — real users and screen readers still get normal tel:/mailto: links.
+          _decode(b64) { return atob(b64); }
+
           // Cross-page links (e.g. Contact.dc.html -> "index.html#platform") land here
           // with a #hash before this component has finished its first mount, so the browser's
           // native scroll-to-anchor fires too early and misses. Retry until the target exists.
@@ -824,8 +866,16 @@
             attempt(30);
           }
 
+          _applyMode(mode) {
+            try { document.documentElement.dataset.mode = mode; } catch (e) {}
+            this.setState({ mode });
+          }
+
           componentDidMount() {
             this._scrollToHash();
+            let saved = null;
+            try { saved = localStorage.getItem('bw-mode'); } catch (e) {}
+            if (saved === 'dark' || saved === 'light') this._applyMode(saved);
             this._offscreen = false;
             if (typeof IntersectionObserver !== 'undefined') {
               if (this._io) this._io.disconnect();
@@ -868,6 +918,14 @@
             if (!this._tailRef) this._tailRef = React.createRef();
             if (!this._demoRef) this._demoRef = React.createRef();
             const done = t >= this.T_END;
+
+            const phone = this._decode('KzEzMTIyMDAxOTky'); // +13122001992
+            const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI='); // +1 (312) 200-1992
+            const emailHello = this._decode('aGVsbG9AZ2V0c3RhcmxpZ2h0LmFp'); // hello@getstarlight.ai
+            const emailSupport = this._decode('c3VwcG9ydEBnZXRzdGFybGlnaHQuYWk='); // support@getstarlight.ai
+            const phoneHref = 'tel:' + phone;
+            const emailHelloHref = 'mailto:' + emailHello;
+            const emailSupportHref = 'mailto:' + emailSupport;
 
             const phase2 = t >= 35; // phone on screen (text thread first, then call)
             const callPhase = t >= 60;
@@ -1022,7 +1080,7 @@
               fillStampScale: fillDone ? 1 : 1.4,
               mlScan: !phase2,
               mlFlown: flownCount,
-              ...SL.contact(),
+              phoneHref, phoneDisplay, emailHelloHref, emailHello, emailSupportHref, emailSupport,
               stampOpacity: done ? 1 : 0,
               stampScale: done ? 1 : 1.4,
               transcriptRef: this._tref,
@@ -1052,6 +1110,13 @@
               chipFBg: pF.bg, chipFColor: pF.color, chipFBorder: pF.border,
               chipTBg: pT.bg, chipTColor: pT.color, chipTBorder: pT.border,
               chipCBg: pC.bg, chipCColor: pC.color, chipCBorder: pC.border,
+              toggleMode: () => {
+                const m = this.state.mode === 'dark' ? 'light' : 'dark';
+                try { localStorage.setItem('bw-mode', m); } catch (e) {}
+                this._applyMode(m);
+              },
+              modeIcon: this.state.mode === 'dark' ? '☀' : '☾',
+              modeTitle: this.state.mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode',
               dmManual: dm === 'manual',
               dmAccept: dm === 'accept-edits',
               dmPlan: dm === 'plan',

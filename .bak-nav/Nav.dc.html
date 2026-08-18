@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<script src="./site.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -46,14 +45,6 @@
   </div>
 </sc-if>
 
-<!-- Phone strip — only below 620px, where .bw-phone-label drops out of the
-     header and the number would otherwise collapse to a bare icon. Sits
-     outside <header> so it scrolls away; the sticky header keeps the icon. -->
-<a class="bw-phonestrip" href="{{ phoneHref }}">
-  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.12em; color: var(--mut);">TALK TO US</span>
-  <span style="font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink);">{{ phoneDisplay }}</span>
-</a>
-
 <!-- ══ Nav ══ -->
 <header style="position: sticky; top: 0; z-index: 50; background: var(--navbg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line2);">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
@@ -76,31 +67,13 @@
       </a>
       <a href="BookDemo.dc.html" class="bw-navlinks" style="color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 500; padding: 9px 14px;" style-hover="color: var(--accent);">Sign in</a>
       <a href="BookDemo.dc.html" style="display: none; background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 10px 18px; border-radius: 9px; transition: background 0.15s;" style-hover="background: var(--accent-h);">Book a demo</a>
-      <button class="bw-navburger" onClick="{{ toggleMenu }}" aria-label="{{ menuLabel }}" aria-expanded="{{ menuExpanded }}" style="width: 32px; height: 32px; border-radius: 50%; background: var(--tintg); border: 1px solid var(--tintgb); color: var(--accent); cursor: pointer; align-items: center; justify-content: center; font-size: 15px; line-height: 1; padding: 0; flex-shrink: 0;">{{ menuIcon }}</button>
     </div>
   </div>
-
-  <!-- Mobile drop-down. Hidden above 1000px by CSS, so it can stay mounted
-       without leaking onto desktop if the viewport is resized while open.
-       The click handler sits on the container so any link inside closes it —
-       needed for same-page anchors, which don't reload and would otherwise
-       leave the panel hanging open over the section you just jumped to. -->
-  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <nav class="bw-mobilemenu" aria-label="Mobile" onClick="{{ closeMenu }}">
-      <sc-for list="{{ links }}" as="l" hint-placeholder-count="7">
-        <a href="{{ l.href }}" style="{{ l.mobileStyle }}">{{ l.label }}</a>
-      </sc-for>
-      <a href="BookDemo.dc.html">Sign in</a>
-      <a href="BookDemo.dc.html" class="bw-mobilecta">Book a demo</a>
-    </nav>
-  </sc-if>
 </header>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { menuOpen: false };
-
   // Landing-page sections are anchors; everything else is its own page.
   LINKS = [
     { key: 'brokeros',  label: 'BrokerOS',     href: 'BrokerOS.dc.html' },
@@ -112,6 +85,11 @@ class Component extends DCLogic {
     { key: 'contact',   label: 'Contact',      href: 'Contact.dc.html' }
   ];
 
+  // Contact details are base64 in source so a plain-text scraper reading the
+  // page HTML finds nothing. One copy here now, instead of one per page —
+  // which is what makes rotating the number a single-line change.
+  _decode(b64) { return atob(b64); }
+
   renderVals() {
     const current = this.props.current ?? '';
     // On the landing page the section links stay in-page so `scroll-behavior:
@@ -122,7 +100,8 @@ class Component extends DCLogic {
     const bar = this.props.showBar;
     const dark = document.documentElement.dataset.mode === 'dark';
 
-    const c = SL.contact();
+    const phone = this._decode('KzEzMTIyMDAxOTky');
+    const phoneDisplay = this._decode('KzEgKDMxMikgMjAwLTE5OTI=');
 
     return {
       showBar: bar !== false && bar !== 'false',
@@ -133,18 +112,8 @@ class Component extends DCLogic {
         label: l.label,
         href: l.anchor ? at(l.anchor) : l.href,
         style: 'text-decoration: none; color: '
-             + (l.key === current ? 'var(--accent)' : 'var(--ink)') + ';',
-        // The mobile panel gets its padding and borders from .bw-mobilemenu a
-        // in theme.css; only the current-page colour needs overriding here.
-        mobileStyle: l.key === current ? 'color: var(--accent);' : ''
+             + (l.key === current ? 'var(--accent)' : 'var(--ink)') + ';'
       })),
-
-      menuOpen: this.state.menuOpen,
-      menuIcon: this.state.menuOpen ? '✕' : '☰',
-      menuLabel: this.state.menuOpen ? 'Close menu' : 'Open menu',
-      menuExpanded: this.state.menuOpen ? 'true' : 'false',
-      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
-      closeMenu: () => this.setState({ menuOpen: false }),
 
       // The theme is already applied pre-paint by the inline script in each
       // page's head; this only flips it. Re-rendering just this component is
@@ -158,11 +127,11 @@ class Component extends DCLogic {
       modeIcon: dark ? '☀' : '☾',
       modeTitle: dark ? 'Switch to light mode' : 'Switch to dark mode',
 
-      phoneHref: c.phoneHref,
-      phoneDisplay: c.phoneDisplay,
+      phoneHref: 'tel:' + phone,
+      phoneDisplay,
       // The visible number is hidden under 620px by .bw-phone-label, so the
       // link needs its own accessible name on mobile.
-      phoneAria: 'Call Starlight at ' + c.phoneDisplay
+      phoneAria: 'Call Starlight at ' + phoneDisplay
     };
   }
 }

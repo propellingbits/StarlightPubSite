@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+  <meta name="design_doc_mode" content="canvas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;background:#EDE9E0;font-family:'Instrument Sans',system-ui,sans-serif}
+    a{color:#1E5B45}a:hover{color:#164434}
+    .dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+    .dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+    .dv-tid{font:600 10px 'IBM Plex Mono',monospace;padding:3px 7px;background:#1D1B16;color:#fff;border-radius:4px;text-decoration:none}
+    .dv-tname{font:600 13px/1.2 'Instrument Sans',sans-serif;color:#1D1B16}
+    .dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+    .dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+    .dv-oid{font:600 10.5px 'IBM Plex Mono',monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1D1B16;border-radius:5px;text-decoration:none}
+    .dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 'Instrument Sans',sans-serif;color:rgba(0,0,0,.55)}
+    .dv-card{max-width:100%;background:#F7F4EE;border:1px solid rgba(0,0,0,.1);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+    .dv-opt:target .dv-oid{background:#1E5B45;color:#fff}
+    .dv-next{margin:22px 0 0;font:12px/1.5 'Instrument Sans',sans-serif;color:rgba(0,0,0,.5)}
+  </style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Colorful graphics for "How it works" — Temporal-inspired, tuned to the paper theme</span></div>
+  <div class="dv-opts">
+
+    <!-- ═══ 1a · Riso print panels ═══ -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Riso panels — flat print-ink graphics, stays on paper</div>
+      <div class="dv-card" style="width: 1000px;">
+        <div style="padding: 56px 44px 60px; color: #1D1B16;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #1E5B45; margin-bottom: 16px;">HOW IT WORKS</div>
+          <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 40px; letter-spacing: -0.01em; margin: 0 0 44px; max-width: 580px; line-height: 1.08;">From messy file to market, without a producer touching it.</h2>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+
+            <div style="background: #FFFDF8; border: 1px solid #E0D9CA; border-radius: 14px; overflow: hidden;">
+              <div style="height: 168px; background: #E8F0E5; position: relative; overflow: hidden;">
+                <div style="position: absolute; left: 34px; top: 38px; width: 96px; height: 118px; background: #F7F4EE; border: 1.5px solid #1E5B45; border-radius: 6px; transform: rotate(-6deg);"></div>
+                <div style="position: absolute; left: 52px; top: 30px; width: 96px; height: 118px; background: #FFFDF8; border: 1.5px solid #1E5B45; border-radius: 6px; transform: rotate(2deg); padding: 14px 12px; box-sizing: border-box;">
+                  <div style="height: 5px; width: 70%; background: #1E5B45; opacity: 0.85; border-radius: 3px; margin-bottom: 8px;"></div>
+                  <div style="height: 4px; width: 90%; background: #C9D5C3; border-radius: 3px; margin-bottom: 6px;"></div>
+                  <div style="height: 4px; width: 82%; background: #C9D5C3; border-radius: 3px; margin-bottom: 6px;"></div>
+                  <div style="height: 4px; width: 88%; background: #C9D5C3; border-radius: 3px;"></div>
+                </div>
+                <div style="position: absolute; right: 42px; top: 26px; width: 58px; height: 58px; border-radius: 50%; background: #D9603B; mix-blend-mode: multiply; opacity: 0.9;"></div>
+                <div style="position: absolute; right: 30px; bottom: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #1E5B45; background: rgba(255,253,248,0.85); border: 1px solid #BDD5C6; border-radius: 4px; padding: 3px 7px;">7 ITEMS MISSING</div>
+                <div style="position: absolute; right: 58px; top: 42px; color: #F7F4EE; font-size: 22px; font-weight: 700; font-family: 'Instrument Sans', sans-serif;">?</div>
+              </div>
+              <div style="padding: 22px 22px 26px;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #D9603B; margin-bottom: 10px;">01</div>
+                <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 8px;">Assign the file</h3>
+                <p style="font-size: 14.5px; color: #494436; margin: 0; line-height: 1.55; text-wrap: pretty;">Drop in a prospect or renewal. Starlight reads the file and lists everything missing — applications, loss runs, signatures, answers.</p>
+              </div>
+            </div>
+
+            <div style="background: #FFFDF8; border: 1px solid #E0D9CA; border-radius: 14px; overflow: hidden;">
+              <div style="height: 168px; background: #E4EBF2; position: relative; overflow: hidden;">
+                <div style="position: absolute; left: -34px; top: -34px; width: 120px; height: 120px; border-radius: 50%; border: 2px solid #3B6BB5; opacity: 0.5;"></div>
+                <div style="position: absolute; left: -52px; top: -52px; width: 156px; height: 156px; border-radius: 50%; border: 2px solid #3B6BB5; opacity: 0.3;"></div>
+                <div style="position: absolute; left: 30px; top: 40px; max-width: 150px; background: #3B6BB5; color: #F2F6FB; border-radius: 12px 12px 12px 3px; padding: 9px 12px; font-size: 11.5px; line-height: 1.45;">Hi Maria — two loss runs left on the Hartford renewal. Reply here or I can call.</div>
+                <div style="position: absolute; right: 30px; bottom: 44px; background: #1E5B45; color: #EAF3EE; border-radius: 12px 12px 3px 12px; padding: 9px 12px; font-size: 11.5px;">calling now ↗</div>
+                <div style="position: absolute; right: 44px; top: 22px; width: 44px; height: 44px; border-radius: 50%; background: #D9603B; mix-blend-mode: multiply; opacity: 0.85; display: flex; align-items: center; justify-content: center;">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="#F7F4EE"/></svg>
+                </div>
+                <div style="position: absolute; left: 34px; bottom: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #3B6BB5;">ON THE RECORD · SMS → CALL</div>
+              </div>
+              <div style="padding: 22px 22px 26px;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #3B6BB5; margin-bottom: 10px;">02</div>
+                <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 8px;">Your AI agent works it</h3>
+                <p style="font-size: 14.5px; color: #494436; margin: 0; line-height: 1.55; text-wrap: pretty;">It texts the client first — and calls only if they don't reply — collecting what's missing, politely and persistently, on the record.</p>
+              </div>
+            </div>
+
+            <div style="background: #FFFDF8; border: 1px solid #E0D9CA; border-radius: 14px; overflow: hidden;">
+              <div style="height: 168px; background: #F4EBDC; position: relative; overflow: hidden;">
+                <div style="position: absolute; left: 30px; top: 28px; display: grid; grid-template-columns: repeat(4, 26px); gap: 7px;">
+                  <div style="height: 26px; border-radius: 5px; background: #1E5B45;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #1E5B45;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #E0A32E;"></div>
+                  <div style="height: 26px; border-radius: 5px; border: 1.5px dashed #C7B489; box-sizing: border-box;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #1E5B45;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #E0A32E;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #1E5B45;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #1E5B45;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #E0A32E;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #1E5B45;"></div>
+                  <div style="height: 26px; border-radius: 5px; border: 1.5px dashed #C7B489; box-sizing: border-box;"></div>
+                  <div style="height: 26px; border-radius: 5px; background: #1E5B45;"></div>
+                </div>
+                <div style="position: absolute; right: 26px; top: 34px; width: 76px; height: 76px; border-radius: 50%; border: 2.5px solid #D9603B; transform: rotate(12deg); display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.12em; color: #D9603B; line-height: 1.5; mix-blend-mode: multiply;">READY<br>TO<br>SUBMIT</div>
+                <div style="position: absolute; left: 30px; bottom: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #8A6D1F;">EVERY ANSWER CITED TO ITS SOURCE</div>
+              </div>
+              <div style="padding: 22px 22px 26px;">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E0A32E; margin-bottom: 10px;">03</div>
+                <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 8px;">You submit to market</h3>
+                <p style="font-size: 14.5px; color: #494436; margin: 0; line-height: 1.55; text-wrap: pretty;">The fill engine maps every verified answer onto the application in seconds. Review, sign, send to carriers.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ 1b · Aurora dark ═══ -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Aurora — Temporal-style glow, dark full-bleed band</div>
+      <div class="dv-card" style="width: 1000px;">
+        <div style="background: #0C1410; padding: 60px 44px 64px; color: #E8EFE9; position: relative; overflow: hidden;">
+          <div style="position: absolute; left: -120px; top: -140px; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(143,199,168,0.32), transparent 65%); filter: blur(10px);"></div>
+          <div style="position: absolute; right: -100px; top: 40px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(224,163,86,0.22), transparent 65%); filter: blur(10px);"></div>
+          <div style="position: absolute; left: 40%; bottom: -180px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(217,96,59,0.16), transparent 65%); filter: blur(10px);"></div>
+          <div style="position: relative;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #8FC7A8; margin-bottom: 16px;">HOW IT WORKS</div>
+            <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 40px; letter-spacing: -0.01em; margin: 0 0 44px; max-width: 580px; line-height: 1.08;">From messy file to market, <em style="color: #8FC7A8;">without a producer touching it.</em></h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+
+              <div style="background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px 22px 26px; backdrop-filter: blur(4px);">
+                <div style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #2E7D5B, #8FC7A8); margin-bottom: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 28px rgba(143,199,168,0.35);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="#0C1410" stroke-width="1.8" fill="none"/><path d="M9 11h7M9 14.5h7M9 18h4.5" stroke="#0C1410" stroke-width="1.8"/></svg>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8FC7A8; margin-bottom: 10px;">01</div>
+                <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 8px; color: #E8EFE9;">Assign the file</h3>
+                <p style="font-size: 14.5px; color: #A9BCAF; margin: 0; line-height: 1.55; text-wrap: pretty;">Drop in a prospect or renewal. Starlight reads the file and lists everything missing — applications, loss runs, signatures, answers.</p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px 22px 26px; backdrop-filter: blur(4px);">
+                <div style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #B8722E, #E8C87E); margin-bottom: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 28px rgba(232,200,126,0.3);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v10H9l-5 4z" stroke="#0C1410" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M8 10.5h8M8 13h5" stroke="#0C1410" stroke-width="1.8"/></svg>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8C87E; margin-bottom: 10px;">02</div>
+                <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 8px; color: #E8EFE9;">Your AI agent works it</h3>
+                <p style="font-size: 14.5px; color: #A9BCAF; margin: 0; line-height: 1.55; text-wrap: pretty;">It texts the client first — and calls only if they don't reply — collecting what's missing, politely and persistently, on the record.</p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px 22px 26px; backdrop-filter: blur(4px);">
+                <div style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #B34A28, #E8916B); margin-bottom: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 28px rgba(232,145,107,0.3);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12h13M12 6l6 6-6 6" stroke="#0C1410" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8916B; margin-bottom: 10px;">03</div>
+                <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 8px; color: #E8EFE9;">You submit to market</h3>
+                <p style="font-size: 14.5px; color: #A9BCAF; margin: 0; line-height: 1.55; text-wrap: pretty;">The fill engine maps every verified answer onto the application in seconds. Review, sign, send to carriers.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ 1c · Ink medallions ═══ -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Ink medallions — smallest change to today's layout</div>
+      <div class="dv-card" style="width: 1000px;">
+        <div style="padding: 56px 44px 60px; color: #1D1B16;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #1E5B45; margin-bottom: 16px;">HOW IT WORKS</div>
+          <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 40px; letter-spacing: -0.01em; margin: 0 0 52px; max-width: 580px; line-height: 1.08;">From messy file to market, without a producer touching it.</h2>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+
+            <div style="border-top: 2px solid #1D1B16; padding-top: 24px;">
+              <div style="width: 64px; height: 64px; position: relative; margin-bottom: 18px;">
+                <div style="position: absolute; inset: 0; border-radius: 50%; background: #1E5B45;"></div>
+                <div style="position: absolute; left: 30px; top: -8px; width: 42px; height: 42px; border-radius: 50%; background: #D9603B; mix-blend-mode: multiply;"></div>
+                <div style="position: absolute; left: 18px; top: 18px; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #F7F4EE;"></div>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1E5B45; margin-bottom: 12px;">01</div>
+              <h3 style="font-size: 20px; font-weight: 600; margin: 0 0 9px;">Assign the file</h3>
+              <p style="font-size: 15px; color: #494436; margin: 0; line-height: 1.55; text-wrap: pretty;">Drop in a prospect or renewal. Starlight reads the file and lists everything missing — applications, loss runs, signatures, answers.</p>
+            </div>
+
+            <div style="border-top: 2px solid #1D1B16; padding-top: 24px;">
+              <div style="width: 64px; height: 64px; position: relative; margin-bottom: 18px;">
+                <div style="position: absolute; inset: 0; border-radius: 50%; background: #3B6BB5; clip-path: inset(0 0 0 50%);"></div>
+                <div style="position: absolute; inset: 0; border-radius: 50%; border: 2px solid #3B6BB5;"></div>
+                <div style="position: absolute; left: -12px; bottom: -6px; width: 36px; height: 36px; border-radius: 50%; background: #E0A32E; mix-blend-mode: multiply;"></div>
+                <div style="position: absolute; left: 22px; top: 24px; width: 16px; height: 16px; border-radius: 50%; background: #F7F4EE;"></div>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3B6BB5; margin-bottom: 12px;">02</div>
+              <h3 style="font-size: 20px; font-weight: 600; margin: 0 0 9px;">Your AI agent works it</h3>
+              <p style="font-size: 15px; color: #494436; margin: 0; line-height: 1.55; text-wrap: pretty;">It texts the client first — and calls only if they don't reply — asking the right questions and collecting what's missing, on the record.</p>
+            </div>
+
+            <div style="border-top: 2px solid #1D1B16; padding-top: 24px;">
+              <div style="width: 64px; height: 64px; position: relative; margin-bottom: 18px;">
+                <div style="position: absolute; inset: 0; background: #D9603B; clip-path: polygon(0 100%, 50% 0, 100% 100%);"></div>
+                <div style="position: absolute; left: 26px; top: 14px; width: 38px; height: 38px; border-radius: 50%; background: #1E5B45; mix-blend-mode: multiply;"></div>
+                <div style="position: absolute; left: 8px; bottom: 8px; width: 20px; height: 20px; background: #E0A32E; mix-blend-mode: multiply;"></div>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9603B; margin-bottom: 12px;">03</div>
+              <h3 style="font-size: 20px; font-weight: 600; margin: 0 0 9px;">You submit to market</h3>
+              <p style="font-size: 15px; color: #494436; margin: 0; line-height: 1.55; text-wrap: pretty;">The fill engine maps every verified answer onto the application in seconds — each one cited to its source. Review, sign, send to carriers.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "apply <a class="dv-oid" href="#1a">1a</a> to the landing page" · "make <a class="dv-oid" href="#1c">1c</a>'s medallions bigger and try them on the Fill engine section" · "riff on <a class="dv-oid" href="#1b">1b</a> in light mode"</p>
+</section>
+
+</x-dc>
+</body>
+</html>
