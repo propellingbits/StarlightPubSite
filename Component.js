@@ -2,8 +2,8 @@ class Component extends DCLogic {
     state = { g: 0, booked: false, mode: 'light', follow: true };
 
     FIELDS = [
-        { label: 'APPLICANT', value: 'Laurier Transport Inc.', src: 'WEB' },
-        { label: 'NIR / MC NO.', value: '2841177 · MC-884120', src: 'WEB' },
+        { label: 'APPLICANT', value: 'Lauxier Transport Inc.', src: 'WEB' },
+        { label: 'NIR / MC NO.', value: '8251177 · MC-996120', src: 'WEB' },
         { label: 'IN BUSINESS SINCE', value: '2013', src: 'WEB' },
         { label: 'VEHICLES · SEC 8', value: '6 units · $742K listed', src: 'FILE' },
         { label: 'DRIVERS · SEC 16', value: '5 · 0 demerit pts', src: 'FILE' },
@@ -16,7 +16,7 @@ class Component extends DCLogic {
     // Step 3/3 \u2014 the call, triggered ONLY because the two texts went
     // unanswered. It collects all three outstanding items.
     LINES = [
-        { t: 64, who: 'agent', text: "Hi Maria \u2014 Ava for Northgate on Laurier's renewal. I texted a couple of times; catching you now to verify three underwriting items." },
+        { t: 64, who: 'agent', text: "Hi Maria \u2014 Ava for Northgate on Lauxier's renewal. I texted a couple of times; catching you now to verify three underwriting items." },
         { t: 71, who: 'client', text: "Oh \u2014 sorry, missed those. Go ahead." },
         { t: 75, who: 'agent', text: "Section 11 \u2014 will you use non-owned trailers this term? How many under your care at once, and the average value?" },
         { t: 82, who: 'client', text: "Yes \u2014 interchange reefers. Never more than four at a time, about sixty thousand each." },
@@ -30,7 +30,7 @@ class Component extends DCLogic {
     // Step 2/3 \u2014 two outbound texts. The client does NOT reply; that
     // silence is exactly what escalates to the call in step 3.
     SMS = [
-        { t: 37, who: 'agent', text: "Hi Maria \u2014 Ava with Northgate on Laurier's renewal. A couple of quick underwriting items left to finish it. Mind replying when you have a sec?" },
+        { t: 37, who: 'agent', text: "Hi Maria \u2014 Ava with Northgate on Lauxier's renewal. A couple of quick underwriting items left to finish it. Mind replying when you have a sec?" },
         { t: 46, who: 'agent', text: "Following up on my earlier note \u2014 still need those items to wrap your renewal. I'll give you a quick call if that's easier." }
     ];
 
@@ -85,8 +85,8 @@ class Component extends DCLogic {
         { name: '+ 21 more', share: 34 }
     ];
     FILL_FIELDS = [
-        { label: 'LEGAL NAME', value: 'Laurier Transport Inc.', src: 'client-docs' },
-        { label: 'DOT / NIR \u2116', value: '2841177', src: 'registrations' },
+        { label: 'LEGAL NAME', value: 'Lauxier Transport Inc.', src: 'client-docs' },
+        { label: 'DOT / NIR \u2116', value: '8251177', src: 'registrations' },
         { label: 'POWER UNITS', value: '18', src: 'registrations' },
         { label: 'TRAILERS', value: '22 \u00b7 dry van, reefer', src: 'section-11' },
         { label: 'DRIVERS / AVG EXP', value: '21 / 9.5 yrs', src: 'drivers-records' },
