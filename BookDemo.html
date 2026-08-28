@@ -40,7 +40,7 @@
       <div style="flex: 1 1 440px; min-width: 340px; animation: bwFadeUp 0.7s ease both;">
         <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">BOOK A DEMO</div>
         <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 52px; letter-spacing: -0.015em; margin: 0 0 22px; line-height: 1.05;">See your agency on Starlight.</h2>
-        <p style="font-size: 18px; color: var(--body); margin: 0; max-width: 480px; text-wrap: pretty;">Thirty minutes — about twenty on your file, the rest for your questions. Bring your messiest one and we'll show you what the AI does with it, live. The calendar loads automatically, right here.</p>
+        <p style="font-size: 18px; color: var(--body); margin: 0; max-width: 480px; text-wrap: pretty;">Thirty minutes — about twenty on your file, the rest for your questions. Bring your messiest one and we’ll show you what the AI does with it, live. The calendar loads automatically, right here.</p>
       </div>
       <div style="flex: 1 1 400px; min-width: 340px; animation: bwFadeUp 0.7s 0.15s ease both;">
         <div style="perspective: 1600px;">
@@ -66,6 +66,10 @@
             </div>
           </div>
         </div>
+        <div style="margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--mut);">
+          <span>ONLY GOT FIFTEEN MINUTES?</span>
+          <a href="Intro.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);" style-hover="border-color: var(--accent);">BOOK A SHORT INTRO INSTEAD</a>
+        </div>
       </div>
     </div>
   </section>
@@ -75,7 +79,7 @@
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{
-  &quot;calLink&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;starlight&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Booking&quot; }
+  &quot;calLink&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;starlight/30min&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Booking&quot; }
 }">
 class Component extends DCLogic {
   state = { calFlipped: false };
@@ -117,7 +121,7 @@ class Component extends DCLogic {
     window.Cal("init", { origin: "https://app.cal.com" });
     window.Cal("inline", {
       elementOrSelector: el,
-      calLink: this.props.calLink ?? 'starlight',
+      calLink: this.props.calLink ?? 'starlight/30min',
       config: { layout: "month_view", theme: "light" }
     });
   }
