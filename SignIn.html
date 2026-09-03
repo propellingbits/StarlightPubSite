@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign In — Starlight</title>
+<meta name="description" content="Starlight accounts are set up during onboarding. Your sign-in link is in your welcome email, or your onboarding manager can resend it.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Starlight">
+<meta property="og:title" content="Sign In — Starlight">
+<meta property="og:description" content="Starlight accounts are set up during onboarding. Your sign-in link is in your welcome email, or your onboarding manager can resend it.">
+<meta property="og:image" content="https://getstarlight.ai/og-image.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="./theme.css">
+<!-- Sets the theme before first paint so dark-mode users don't get a light flash.
+     Must stay inline and blocking: an external file reintroduces the flash. -->
+<script>try{var m=localStorage.getItem('bw-mode');if(m==='dark'||m==='light')document.documentElement.dataset.mode=m}catch(e){}</script>
+<script src="./PageParts.js" defer></script>
+<script src="./site.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+</helmet>
+
+<div style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: var(--ink); background: var(--bg); min-height: 100vh;">
+
+  <!-- ══ Announcement bar + nav ══ -->
+  <dc-import name="Nav" hint-size="100%,106px"></dc-import>
+
+  <!-- ══ Sign in ══ -->
+  <section data-screen-label="Sign in" style="background: var(--panel);">
+    <div class="bw-pad" style="max-width: 760px; margin: 0 auto; padding: 92px 32px 108px; animation: bwFadeUp 0.7s ease both;">
+
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;">SIGN IN</div>
+      <h1 class="bw-h1" style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 52px; letter-spacing: -0.018em; margin: 0 0 22px; line-height: 1.05;">Your link comes from onboarding.</h1>
+      <p style="font-size: 18.5px; color: var(--body); margin: 0 0 36px; max-width: 560px; text-wrap: pretty;">If you&rsquo;re looking for a login box, there isn&rsquo;t one. Starlight accounts are opened with you during onboarding, and your link is issued directly to you.</p>
+
+      <div style="border: 1px solid var(--line); background: var(--panel2); border-radius: 12px; overflow: hidden; max-width: 620px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.11em; color: var(--mut); padding: 13px 20px; border-bottom: 1px solid var(--hair);">TWO WAYS IN</div>
+        <div style="display: flex; align-items: baseline; gap: 16px; padding: 17px 20px; border-bottom: 1px dashed var(--line2);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--accent); flex-shrink: 0; width: 26px;">01</span>
+          <span style="font-size: 16px; color: var(--body);">Your welcome email carries the sign-in link. It stays valid &mdash; search your inbox for <em style="font-style: normal; color: var(--ink);">Starlight</em>.</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 16px; padding: 17px 20px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--accent); flex-shrink: 0; width: 26px;">02</span>
+          <span style="font-size: 16px; color: var(--body);">Ask your onboarding manager. They can resend it in a minute, no ticket required.</span>
+        </div>
+      </div>
+
+      <p style="font-size: 16px; color: var(--body); margin: 22px 0 0; max-width: 620px;">Can&rsquo;t find either? Email <a href="{{ emailSupportHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);" style-hover="border-color: var(--accent);">{{ emailSupport }}</a> or call <a href="{{ phoneHref }}" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tintgb);" style-hover="border-color: var(--accent);">{{ phoneDisplay }}</a> and we will get you back in.</p>
+
+      <!-- Escape hatch: most people who land here clicked "Sign in" from the nav
+           without having an account yet, so the page must not be a dead end. -->
+      <div style="margin-top: 46px; padding-top: 32px; border-top: 1px solid var(--line2); display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <span style="font-size: 16.5px; color: var(--body);">Not a customer yet?</span>
+        <a href="BookDemo.html" style="background: var(--accent); color: var(--on-accent); text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 24px; border-radius: 10px; transition: background 0.15s;" style-hover="background: var(--accent-h);">Book a demo</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Footer ══ -->
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const c = SL.contact();
+    return {
+      emailSupport: c.emailSupport,
+      emailSupportHref: c.emailSupportHref,
+      phoneHref: c.phoneHref,
+      phoneDisplay: c.phoneDisplay
+    };
+  }
+}
+</script>
+</body>
+</html>
